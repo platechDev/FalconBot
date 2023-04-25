@@ -1,0 +1,865 @@
+[
+    {
+        "id": "fd2bd8cfadf0983b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5123f088baf692fb",
+        "type": "group",
+        "z": "fd2bd8cfadf0983b",
+        "name": "check Files",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0bcf4aef851f31fd",
+            "75196e73b6d5ed1f",
+            "4f4b05e822994741",
+            "eea5ce7a204b68c6",
+            "2acaf73b46f365bc",
+            "05b4400c0eeffddb",
+            "17107faffba21b44",
+            "dc21109e5856f4d9",
+            "a42a22b3c5aa6973",
+            "1eba09635e8d3dd6"
+        ],
+        "x": 34,
+        "y": 299,
+        "w": 1042,
+        "h": 202
+    },
+    {
+        "id": "31a7d5666892a8ee",
+        "type": "group",
+        "z": "fd2bd8cfadf0983b",
+        "name": "Convert Image and delete it",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3acad38d7d3996a0",
+            "90be7448a48f16a6",
+            "0b670102e979e69b",
+            "54d40125a9db2508",
+            "b1227e5cc35798b1",
+            "e69d54fee738b141",
+            "751ccab64661ea67"
+        ],
+        "x": 44,
+        "y": 539,
+        "w": 882,
+        "h": 122
+    },
+    {
+        "id": "1c4828488a71b550",
+        "type": "group",
+        "z": "fd2bd8cfadf0983b",
+        "name": "call falcon Motor",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "cf3d0e3b6003c633",
+            "b6fa0cced77a6ce2",
+            "beba21c407631436",
+            "93af9922594051f7",
+            "65d33ce3f4c44c2b"
+        ],
+        "x": 54,
+        "y": 719,
+        "w": 572,
+        "h": 122
+    },
+    {
+        "id": "f3e52634f402fa66",
+        "type": "group",
+        "z": "fd2bd8cfadf0983b",
+        "name": "Get Id",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "a7a359744447693b",
+            "ea141ee5a7cc6f54",
+            "7a2da92c1f2c6b1d"
+        ],
+        "x": 64,
+        "y": 879,
+        "w": 292,
+        "h": 82
+    },
+    {
+        "id": "ca7cf5c2362fad66",
+        "type": "group",
+        "z": "fd2bd8cfadf0983b",
+        "name": "logger",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "bb3ef92b9c927825",
+            "ed0c566166d19dce"
+        ],
+        "x": 734,
+        "y": 739,
+        "w": 252,
+        "h": 82
+    },
+    {
+        "id": "d498a389a6189e45",
+        "type": "group",
+        "z": "fd2bd8cfadf0983b",
+        "name": "get ids",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0cde130690752904",
+            "28024e457a753f30",
+            "8e874ffee86cd3f7"
+        ],
+        "x": 74,
+        "y": 999,
+        "w": 462,
+        "h": 82
+    },
+    {
+        "id": "c75d19ed01c79312",
+        "type": "group",
+        "z": "fd2bd8cfadf0983b",
+        "name": "clean ids",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "06d1684b8f965b84",
+            "7bb33fb86b30b086"
+        ],
+        "x": 74,
+        "y": 1119,
+        "w": 352,
+        "h": 82
+    },
+    {
+        "id": "3acad38d7d3996a0",
+        "type": "file in",
+        "z": "fd2bd8cfadf0983b",
+        "g": "31a7d5666892a8ee",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 180,
+        "y": 580,
+        "wires": [
+            [
+                "90be7448a48f16a6"
+            ]
+        ]
+    },
+    {
+        "id": "90be7448a48f16a6",
+        "type": "function",
+        "z": "fd2bd8cfadf0983b",
+        "g": "31a7d5666892a8ee",
+        "name": "buffer to image 64",
+        "func": "msg.payload = Buffer.from(msg.payload).toString('base64')\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 580,
+        "wires": [
+            [
+                "751ccab64661ea67",
+                "b1227e5cc35798b1"
+            ]
+        ]
+    },
+    {
+        "id": "7ff04ef968375045",
+        "type": "image viewer",
+        "z": "fd2bd8cfadf0983b",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "active": true,
+        "x": 610,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf3d0e3b6003c633",
+        "type": "axios-request",
+        "z": "fd2bd8cfadf0983b",
+        "g": "1c4828488a71b550",
+        "name": "FalconMotor",
+        "endpoint": "4e2fe5e7589b6a92",
+        "method": "post",
+        "url": "",
+        "responseType": "json",
+        "keepAlive": false,
+        "timeout": 30000,
+        "validateStatus": true,
+        "headers": [
+            {
+                "keyType": "str",
+                "keyValue": "Content-Type",
+                "valueType": "str",
+                "valueValue": "application/json"
+            }
+        ],
+        "params": [
+            {
+                "keyType": "str",
+                "keyValue": "",
+                "valueType": "str",
+                "valueValue": ""
+            }
+        ],
+        "x": 430,
+        "y": 760,
+        "wires": [
+            [
+                "93af9922594051f7",
+                "65d33ce3f4c44c2b"
+            ]
+        ]
+    },
+    {
+        "id": "b6fa0cced77a6ce2",
+        "type": "link in",
+        "z": "fd2bd8cfadf0983b",
+        "g": "1c4828488a71b550",
+        "name": "link in 1",
+        "links": [
+            "751ccab64661ea67"
+        ],
+        "x": 95,
+        "y": 760,
+        "wires": [
+            [
+                "beba21c407631436"
+            ]
+        ]
+    },
+    {
+        "id": "beba21c407631436",
+        "type": "function",
+        "z": "fd2bd8cfadf0983b",
+        "g": "1c4828488a71b550",
+        "name": "create Json",
+        "func": "const obj = {}\n\nobj[\"ticketType\"] = \"type1\"\nobj[\"image\"] = msg.payload\n\nmsg.payload = obj\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 760,
+        "wires": [
+            [
+                "cf3d0e3b6003c633"
+            ]
+        ]
+    },
+    {
+        "id": "0bcf4aef851f31fd",
+        "type": "inject",
+        "z": "fd2bd8cfadf0983b",
+        "g": "5123f088baf692fb",
+        "name": "path inyect",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "path",
+                "v": "D:\\platech\\suserte vision ai\\final test",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 420,
+        "wires": [
+            [
+                "75196e73b6d5ed1f",
+                "05b4400c0eeffddb"
+            ]
+        ]
+    },
+    {
+        "id": "75196e73b6d5ed1f",
+        "type": "fs-ops-dir",
+        "z": "fd2bd8cfadf0983b",
+        "g": "5123f088baf692fb",
+        "name": "listFile",
+        "path": "path",
+        "pathType": "msg",
+        "filter": "*",
+        "filterType": "str",
+        "dir": "files",
+        "dirType": "msg",
+        "x": 310,
+        "y": 420,
+        "wires": [
+            [
+                "4f4b05e822994741"
+            ]
+        ]
+    },
+    {
+        "id": "4f4b05e822994741",
+        "type": "change",
+        "z": "fd2bd8cfadf0983b",
+        "g": "5123f088baf692fb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "file",
+                "pt": "flow",
+                "to": "files",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [
+                "eea5ce7a204b68c6"
+            ]
+        ]
+    },
+    {
+        "id": "eea5ce7a204b68c6",
+        "type": "array-loop",
+        "z": "fd2bd8cfadf0983b",
+        "g": "5123f088baf692fb",
+        "name": "files",
+        "key": "aleea5ce7a204b68c6",
+        "keyType": "msg",
+        "reset": false,
+        "resetValue": "value-null",
+        "array": "file",
+        "arrayType": "flow",
+        "x": 610,
+        "y": 420,
+        "wires": [
+            [],
+            [
+                "2acaf73b46f365bc"
+            ]
+        ]
+    },
+    {
+        "id": "2acaf73b46f365bc",
+        "type": "delay",
+        "z": "fd2bd8cfadf0983b",
+        "g": "5123f088baf692fb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "0.2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 420,
+        "wires": [
+            [
+                "17107faffba21b44"
+            ]
+        ]
+    },
+    {
+        "id": "05b4400c0eeffddb",
+        "type": "change",
+        "z": "fd2bd8cfadf0983b",
+        "g": "5123f088baf692fb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "flow",
+                "to": "path",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "17107faffba21b44",
+        "type": "function",
+        "z": "fd2bd8cfadf0983b",
+        "g": "5123f088baf692fb",
+        "name": "inyect Path",
+        "func": "msg.filename = `${flow.get('path')}\\\\${msg.payload}`\nflow.set(\"filename\", msg.filename)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 420,
+        "wires": [
+            [
+                "dc21109e5856f4d9",
+                "1eba09635e8d3dd6"
+            ]
+        ]
+    },
+    {
+        "id": "dc21109e5856f4d9",
+        "type": "link out",
+        "z": "fd2bd8cfadf0983b",
+        "g": "5123f088baf692fb",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "0b670102e979e69b"
+        ],
+        "x": 1035,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "0b670102e979e69b",
+        "type": "link in",
+        "z": "fd2bd8cfadf0983b",
+        "g": "31a7d5666892a8ee",
+        "name": "link in 2",
+        "links": [
+            "dc21109e5856f4d9"
+        ],
+        "x": 85,
+        "y": 580,
+        "wires": [
+            [
+                "3acad38d7d3996a0"
+            ]
+        ]
+    },
+    {
+        "id": "54d40125a9db2508",
+        "type": "fs-ops-delete",
+        "z": "fd2bd8cfadf0983b",
+        "g": "31a7d5666892a8ee",
+        "name": "",
+        "path": "",
+        "pathType": "str",
+        "filename": "filename",
+        "filenameType": "msg",
+        "x": 770,
+        "y": 580,
+        "wires": [
+            [
+                "e69d54fee738b141"
+            ]
+        ]
+    },
+    {
+        "id": "b1227e5cc35798b1",
+        "type": "change",
+        "z": "fd2bd8cfadf0983b",
+        "g": "31a7d5666892a8ee",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "filename",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 580,
+        "wires": [
+            [
+                "54d40125a9db2508"
+            ]
+        ]
+    },
+    {
+        "id": "e69d54fee738b141",
+        "type": "link out",
+        "z": "fd2bd8cfadf0983b",
+        "g": "31a7d5666892a8ee",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "a42a22b3c5aa6973"
+        ],
+        "x": 885,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "a42a22b3c5aa6973",
+        "type": "link in",
+        "z": "fd2bd8cfadf0983b",
+        "g": "5123f088baf692fb",
+        "name": "link in 3",
+        "links": [
+            "e69d54fee738b141"
+        ],
+        "x": 525,
+        "y": 460,
+        "wires": [
+            [
+                "eea5ce7a204b68c6"
+            ]
+        ]
+    },
+    {
+        "id": "751ccab64661ea67",
+        "type": "link out",
+        "z": "fd2bd8cfadf0983b",
+        "g": "31a7d5666892a8ee",
+        "name": "link out 4",
+        "mode": "link",
+        "links": [
+            "b48a794572c2d741",
+            "b6fa0cced77a6ce2"
+        ],
+        "x": 525,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "b48a794572c2d741",
+        "type": "link in",
+        "z": "fd2bd8cfadf0983b",
+        "name": "link in 4",
+        "links": [
+            "751ccab64661ea67"
+        ],
+        "x": 505,
+        "y": 40,
+        "wires": [
+            [
+                "7ff04ef968375045"
+            ]
+        ]
+    },
+    {
+        "id": "a7a359744447693b",
+        "type": "function",
+        "z": "fd2bd8cfadf0983b",
+        "g": "f3e52634f402fa66",
+        "name": "extract id",
+        "func": "const example = msg.payload\n\nconst idNames = [\"C.SEG\",\"ID.TRA\",\"Cod.Seg\"]\n\nconst keys = Object.keys(example)\n\nlet foundKey = \"\"\n\nidNames.forEach(idName => {\n    const found = keys.find(key => key == idName)\n    \n    if(found !== undefined){\n        foundKey = found\n    }\n})\n\nmsg.payload = example[foundKey].trim()\n\nlet ids = flow.get(\"ids\")\n\nif(ids === undefined){\n    ids = []\n}\n\nids.push(msg.payload)\nflow.set(\"ids\",ids)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 920,
+        "wires": [
+            [
+                "7a2da92c1f2c6b1d"
+            ]
+        ]
+    },
+    {
+        "id": "93af9922594051f7",
+        "type": "link out",
+        "z": "fd2bd8cfadf0983b",
+        "g": "1c4828488a71b550",
+        "name": "link out 5",
+        "mode": "link",
+        "links": [
+            "ea141ee5a7cc6f54"
+        ],
+        "x": 585,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "ea141ee5a7cc6f54",
+        "type": "link in",
+        "z": "fd2bd8cfadf0983b",
+        "g": "f3e52634f402fa66",
+        "name": "link in 5",
+        "links": [
+            "93af9922594051f7"
+        ],
+        "x": 105,
+        "y": 920,
+        "wires": [
+            [
+                "a7a359744447693b"
+            ]
+        ]
+    },
+    {
+        "id": "65d33ce3f4c44c2b",
+        "type": "link out",
+        "z": "fd2bd8cfadf0983b",
+        "d": true,
+        "g": "1c4828488a71b550",
+        "name": "link out 6",
+        "mode": "link",
+        "links": [
+            "ed0c566166d19dce"
+        ],
+        "x": 585,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "7a2da92c1f2c6b1d",
+        "type": "link out",
+        "z": "fd2bd8cfadf0983b",
+        "d": true,
+        "g": "f3e52634f402fa66",
+        "name": "link out 7",
+        "mode": "link",
+        "links": [
+            "ed0c566166d19dce"
+        ],
+        "x": 315,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "bb3ef92b9c927825",
+        "type": "debug",
+        "z": "fd2bd8cfadf0983b",
+        "g": "ca7cf5c2362fad66",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "ed0c566166d19dce",
+        "type": "link in",
+        "z": "fd2bd8cfadf0983b",
+        "g": "ca7cf5c2362fad66",
+        "name": "link in 6",
+        "links": [
+            "7a2da92c1f2c6b1d",
+            "8e874ffee86cd3f7",
+            "65d33ce3f4c44c2b",
+            "1eba09635e8d3dd6"
+        ],
+        "x": 775,
+        "y": 780,
+        "wires": [
+            [
+                "bb3ef92b9c927825"
+            ]
+        ]
+    },
+    {
+        "id": "0cde130690752904",
+        "type": "inject",
+        "z": "fd2bd8cfadf0983b",
+        "g": "d498a389a6189e45",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 1040,
+        "wires": [
+            [
+                "28024e457a753f30"
+            ]
+        ]
+    },
+    {
+        "id": "28024e457a753f30",
+        "type": "change",
+        "z": "fd2bd8cfadf0983b",
+        "g": "d498a389a6189e45",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ids",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 1040,
+        "wires": [
+            [
+                "8e874ffee86cd3f7"
+            ]
+        ]
+    },
+    {
+        "id": "8e874ffee86cd3f7",
+        "type": "link out",
+        "z": "fd2bd8cfadf0983b",
+        "g": "d498a389a6189e45",
+        "name": "link out 8",
+        "mode": "link",
+        "links": [
+            "ed0c566166d19dce"
+        ],
+        "x": 495,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "1eba09635e8d3dd6",
+        "type": "link out",
+        "z": "fd2bd8cfadf0983b",
+        "d": true,
+        "g": "5123f088baf692fb",
+        "name": "link out 9",
+        "mode": "link",
+        "links": [
+            "ed0c566166d19dce"
+        ],
+        "x": 1035,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "06d1684b8f965b84",
+        "type": "inject",
+        "z": "fd2bd8cfadf0983b",
+        "g": "c75d19ed01c79312",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 1160,
+        "wires": [
+            [
+                "7bb33fb86b30b086"
+            ]
+        ]
+    },
+    {
+        "id": "7bb33fb86b30b086",
+        "type": "change",
+        "z": "fd2bd8cfadf0983b",
+        "g": "c75d19ed01c79312",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ids",
+                "pt": "flow",
+                "to": "[]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e2fe5e7589b6a92",
+        "type": "axios-endpoint",
+        "name": "FalconProxy",
+        "baseURL": "http://3.83.97.219/FalconMotor",
+        "caCertPath": "",
+        "rejectUnauthorized": true,
+        "proxyEnabled": false,
+        "proxyProtocol": "https",
+        "proxyHost": "",
+        "proxyPort": ""
+    }
+]

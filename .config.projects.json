@@ -1,0 +1,9 @@
+{
+    "projects": {
+        "FalconBot": {
+            "credentialSecret": false,
+            "rootPath": ""
+        }
+    },
+    "activeProject": "FalconBot"
+}

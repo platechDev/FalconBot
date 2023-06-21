@@ -1,12 +1,14 @@
 {
-    "name": "FalconBot",
+    "name": "node-red-project",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
-    "node-red": {
-        "settings": {
-            "flowFile": "falconBot.json",
-            "credentialsFile": "falconBot_cred.json"
-        }
+    "private": true,
+    "dependencies": {
+        "node-red-contrib-axios": "~1.1.1",
+        "node-red-contrib-fs-ops": "~1.6.0",
+        "node-red-contrib-image-tools": "~2.0.4",
+        "node-red-contrib-isonline": "~1.1.15",
+        "node-red-contrib-loop-processing": "~0.5.1",
+        "node-red-contrib-play-audio": "~2.5.0"
     }
 }

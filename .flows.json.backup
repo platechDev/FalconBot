@@ -1631,8 +1631,7 @@
         "y": 2180,
         "wires": [
             [
-                "881bcebe431eb544",
-                "d2dc2caff5791174"
+                "881bcebe431eb544"
             ]
         ]
     },
@@ -2058,22 +2057,6 @@
         "voice": "0",
         "x": 930,
         "y": 2180,
-        "wires": []
-    },
-    {
-        "id": "d2dc2caff5791174",
-        "type": "debug",
-        "z": "29719104d6291d44",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 2080,
         "wires": []
     }
 ]

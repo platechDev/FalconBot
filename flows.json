@@ -187,7 +187,7 @@
         ],
         "x": 94,
         "y": 1659,
-        "w": 422,
+        "w": 392,
         "h": 82
     },
     {
@@ -270,7 +270,7 @@
             "c1ab235973370917",
             "40e55c222db7b10a"
         ],
-        "x": 74,
+        "x": 94,
         "y": 2139,
         "w": 732,
         "h": 222
@@ -681,7 +681,7 @@
         "z": "29719104d6291d44",
         "g": "928414625d31ff23",
         "name": "extract id",
-        "func": "const example = msg.payload\n\nconst idNames = [\n    \"C.SEG\",\n    \"ID.TRA\",\n    \"Cod.Seg\",\n    \"ID TRA\",\n    \"ID. TRA\",\n    \"TRA\",\n    \"NO.TR\"\n    ]\n\nconst keys = Object.keys(example)\n\nlet foundKey = \"\"\n\n\n\nidNames.forEach(idName => {\n    const found = keys.find(key => key == idName)\n    \n    if(found !== undefined){\n        foundKey = found\n    }\n})\n\nmsg.payload = example[foundKey].trim()\n\nlet ids = flow.get(\"ids\")\n\nif(ids === undefined){\n    ids = []\n}\n\n\nconst idFound = ids.find(id => id === msg.payload)\n\n/*\nif(idFound === undefined){\n    ids.push(msg.payload)\n    flow.set(\"ids\",ids)\n    \n   \n    \n    msg.payload = {\n        topic   : \"ticket\",\n        message :  {\n            \"id_TRA\": msg.payload,\n            \"scannerId\": flow.get(\"scannerId\")\n        }\n    }\n    \n    return msg;\n}*/\n\n\nflow.set(\"id_TRA\", msg.payload)\n\nmsg.payload = {\n    \"topic\": \"front\",\n    \"message\": {\n        \"id_TRA\": msg.payload,\n        \"scannerId\": \"\",\n        \n    }\n}\n\nreturn msg\n\n\n\n\n\n",
+        "func": "const example = msg.payload\n\nconst idNames = [\n    \"C.SEG\",\n    \"ID.TRA\",\n    \"Cod.Seg\",\n    \"ID TRA\",\n    \"ID. TRA\",\n    \"TRA\",\n    \"NO.TR\"\n    ]\n\nconst keys = Object.keys(example)\n\nlet foundKey = \"\"\n\nidNames.forEach(idName => {\n    const found = keys.find(key => key == idName)\n    \n    if(found !== undefined){\n        foundKey = found\n    }\n})\n\nmsg.payload = example[foundKey].trim()\n\nlet ids = flow.get(\"ids\")\n\nif(ids === undefined){\n    ids = []\n}\n\n\nconst idFound = ids.find(id => id === msg.payload)\n\n/*\nif(idFound === undefined){\n    ids.push(msg.payload)\n    flow.set(\"ids\",ids)\n    \n   \n    \n    msg.payload = {\n        topic   : \"ticket\",\n        message :  {\n            \"id_TRA\": msg.payload,\n            \"scannerId\": flow.get(\"scannerId\")\n        }\n    }\n    \n    return msg;\n}*/\n\nflow.set(\"id_TRA\", msg.payload.split(\" \")[0])\n\nmsg.payload = {\n    \"topic\": \"front\",\n    \"message\": {\n        \"id_TRA\": msg.payload.split(\" \")[0],\n        \"scannerId\": \"\",\n        \n    }\n}\n\nreturn msg\n\n\n\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1225,7 +1225,7 @@
         "name": "susuerteWebsocket",
         "server": "",
         "client": "49b1776fbf1ce66a",
-        "x": 190,
+        "x": 210,
         "y": 2200,
         "wires": [
             [
@@ -1242,7 +1242,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 370,
+        "x": 390,
         "y": 2200,
         "wires": [
             [
@@ -1460,7 +1460,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
+        "x": 380,
         "y": 2320,
         "wires": [
             [
@@ -1490,7 +1490,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 190,
+        "x": 210,
         "y": 2320,
         "wires": [
             [
@@ -1510,7 +1510,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
+        "x": 700,
         "y": 2260,
         "wires": [
             []
@@ -1526,7 +1526,7 @@
         "links": [
             "80cf6ca3f96b8451"
         ],
-        "x": 485,
+        "x": 505,
         "y": 2320,
         "wires": []
     },
@@ -1559,7 +1559,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 710,
         "y": 2220,
         "wires": [
             []
@@ -1593,15 +1593,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 510,
+        "x": 530,
         "y": 2200,
         "wires": [
             [
                 "40e55c222db7b10a"
             ],
             [
-                "b4984081e5ee924f",
-                "177fd1ad58db2dd3"
+                "b4984081e5ee924f"
             ],
             [
                 "58ab21d5598741c3"
@@ -1628,7 +1627,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
+        "x": 680,
         "y": 2180,
         "wires": [
             [
@@ -1758,22 +1757,6 @@
         ]
     },
     {
-        "id": "df4059958a4fbedf",
-        "type": "debug",
-        "z": "29719104d6291d44",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 900,
-        "wires": []
-    },
-    {
         "id": "7dbae6a8317614a4",
         "type": "change",
         "z": "29719104d6291d44",
@@ -1864,25 +1847,10 @@
         "wires": []
     },
     {
-        "id": "177fd1ad58db2dd3",
-        "type": "debug",
-        "z": "29719104d6291d44",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 2300,
-        "wires": []
-    },
-    {
         "id": "d285dd9ddd793e3a",
         "type": "axios-request",
         "z": "29719104d6291d44",
+        "g": "da4aeef4c08f8adf",
         "name": "FalconMotor",
         "endpoint": "4e2fe5e7589b6a92",
         "method": "post",
@@ -1912,8 +1880,7 @@
         "wires": [
             [
                 "e9a630128f46d513",
-                "5a4c796e2d7e4c7e",
-                "df4059958a4fbedf"
+                "5a4c796e2d7e4c7e"
             ]
         ]
     },
@@ -1921,6 +1888,7 @@
         "id": "87f320e87dea3ef8",
         "type": "axios-request",
         "z": "29719104d6291d44",
+        "g": "c669a1cf9d8a82c1",
         "name": "susuerteBack",
         "endpoint": "26cf54f551937318",
         "method": "get",
@@ -1957,6 +1925,7 @@
         "id": "43c70d2c7dd175cd",
         "type": "array-loop",
         "z": "29719104d6291d44",
+        "g": "e42599f0157e6180",
         "name": "files",
         "key": "aleea5ce7a204b68c6",
         "keyType": "msg",
@@ -1977,6 +1946,7 @@
         "id": "f329b8b42adcb15c",
         "type": "while-loop",
         "z": "29719104d6291d44",
+        "g": "264ccac2028ff316",
         "name": "checkOnline",
         "condi": "!msg.payload",
         "limit": false,
@@ -1998,6 +1968,7 @@
         "id": "61f2c11a1ea9d86a",
         "type": "fs-ops-delete",
         "z": "29719104d6291d44",
+        "g": "cd45e048456da76d",
         "name": "",
         "path": "",
         "pathType": "str",
@@ -2015,6 +1986,7 @@
         "id": "21a4b980ec751537",
         "type": "fs-ops-dir",
         "z": "29719104d6291d44",
+        "g": "e42599f0157e6180",
         "name": "listFile",
         "path": "path",
         "pathType": "msg",
@@ -2034,6 +2006,7 @@
         "id": "5bfd88748ca6c6ff",
         "type": "is online",
         "z": "29719104d6291d44",
+        "g": "264ccac2028ff316",
         "name": "",
         "url": "",
         "action": "0",
@@ -2049,6 +2022,7 @@
         "id": "598773f1fe6ed261",
         "type": "is online",
         "z": "29719104d6291d44",
+        "g": "bf3ee4aaf4678eac",
         "name": "",
         "url": "",
         "action": "2",
@@ -2069,7 +2043,7 @@
         "data": "payload",
         "dataType": "msg",
         "active": true,
-        "x": 650,
+        "x": 630,
         "y": 40,
         "wires": [
             []
@@ -2080,76 +2054,9 @@
         "type": "play audio",
         "z": "29719104d6291d44",
         "name": "",
-        "voice": "1",
-        "x": 910,
+        "voice": "0",
+        "x": 930,
         "y": 2180,
-        "wires": []
-    },
-    {
-        "id": "7937b2bfbabda55a",
-        "type": "axios-request",
-        "z": "29719104d6291d44",
-        "name": "",
-        "endpoint": "4e2fe5e7589b6a92",
-        "method": "get",
-        "url": "",
-        "responseType": "json",
-        "keepAlive": false,
-        "timeout": 30000,
-        "validateStatus": true,
-        "headers": [],
-        "params": [],
-        "x": 430,
-        "y": 2580,
-        "wires": [
-            [
-                "86f602bece8c33de"
-            ]
-        ]
-    },
-    {
-        "id": "ba46c0c260992215",
-        "type": "inject",
-        "z": "29719104d6291d44",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 280,
-        "y": 2580,
-        "wires": [
-            [
-                "7937b2bfbabda55a"
-            ]
-        ]
-    },
-    {
-        "id": "86f602bece8c33de",
-        "type": "debug",
-        "z": "29719104d6291d44",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 2580,
         "wires": []
     }
 ]

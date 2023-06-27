@@ -108,7 +108,7 @@
             "0f5e5dc41b5ed50f",
             "0e793c467675e12e"
         ],
-        "x": 714,
+        "x": 674,
         "y": 739,
         "w": 252,
         "h": 82
@@ -681,7 +681,7 @@
         "z": "29719104d6291d44",
         "g": "928414625d31ff23",
         "name": "extract id",
-        "func": "const example = msg.payload\n\nconst idNames = [\n    \"C.SEG\",\n    \"ID.TRA\",\n    \"Cod.Seg\",\n    \"ID TRA\",\n    \"ID. TRA\",\n    \"TRA\",\n    \"NO.TR\"\n    ]\n\nconst keys = Object.keys(example)\n\nlet foundKey = \"\"\n\nidNames.forEach(idName => {\n    const found = keys.find(key => key == idName)\n    \n    if(found !== undefined){\n        foundKey = found\n    }\n})\n\nmsg.payload = example[foundKey].trim()\n\nlet ids = flow.get(\"ids\")\n\nif(ids === undefined){\n    ids = []\n}\n\n\nconst idFound = ids.find(id => id === msg.payload)\n\n/*\nif(idFound === undefined){\n    ids.push(msg.payload)\n    flow.set(\"ids\",ids)\n    \n   \n    \n    msg.payload = {\n        topic   : \"ticket\",\n        message :  {\n            \"id_TRA\": msg.payload,\n            \"scannerId\": flow.get(\"scannerId\")\n        }\n    }\n    \n    return msg;\n}*/\n\nflow.set(\"id_TRA\", msg.payload.split(\" \")[0])\n\nmsg.payload = {\n    \"topic\": \"front\",\n    \"message\": {\n        \"id_TRA\": msg.payload.split(\" \")[0],\n        \"scannerId\": \"\",\n        \n    }\n}\n\nreturn msg\n\n\n\n\n\n",
+        "func": "const example = msg.payload\n\nconst idNames = [\n    \"ID.TRA\",\n    \"ID TRA\",\n    \"ID. TRA\",\n    \"TRA\",\n    \"NO.TR\",\n    \"Tr\",\n    \"No.Tr\",\n    \"ID TRANSACCION\",\n    ]\n\nconst keys = Object.keys(example)\n\nlet foundKey = \"\"\n\nidNames.forEach(idName => {\n    const found = keys.find(key => key == idName)\n    \n    if(found !== undefined){\n        foundKey = found\n    }\n})\n\nmsg.payload = example[foundKey].trim()\n\nlet ids = flow.get(\"ids\")\n\nif(ids === undefined){\n    ids = []\n}\n\n\nconst idFound = ids.find(id => id === msg.payload)\n\n/*\nif(idFound === undefined){\n    ids.push(msg.payload)\n    flow.set(\"ids\",ids)\n    \n   \n    \n    msg.payload = {\n        topic   : \"ticket\",\n        message :  {\n            \"id_TRA\": msg.payload,\n            \"scannerId\": flow.get(\"scannerId\")\n        }\n    }\n    \n    return msg;\n}*/\n\nflow.set(\"id_TRA\", msg.payload.split(\" \")[0])\n\nmsg.payload = {\n    \"topic\": \"front\",\n    \"message\": {\n        \"id_TRA\": msg.payload.split(\" \")[0],\n        \"scannerId\": \"\",\n        \n    }\n}\n\nreturn msg\n\n\n\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -703,7 +703,8 @@
         "name": "link out 5",
         "mode": "link",
         "links": [
-            "52b9378c24125654"
+            "52b9378c24125654",
+            "0e793c467675e12e"
         ],
         "x": 585,
         "y": 800,
@@ -769,7 +770,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
+        "x": 820,
         "y": 780,
         "wires": []
     },
@@ -785,9 +786,10 @@
             "d5ef7b61282b67a3",
             "8d3ec05d46f35b78",
             "779af63791490631",
-            "42ff19f6e6383224"
+            "42ff19f6e6383224",
+            "e9a630128f46d513"
         ],
-        "x": 755,
+        "x": 715,
         "y": 780,
         "wires": [
             [

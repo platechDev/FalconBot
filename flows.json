@@ -2,7 +2,23 @@
     {
         "id": "29719104d6291d44",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "image read - falconMotor",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a2cb632c74c1999c",
+        "type": "tab",
+        "label": "init process",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8f6ceb50f45c3ecf",
+        "type": "tab",
+        "label": "websocket handler",
         "disabled": false,
         "info": "",
         "env": []
@@ -91,8 +107,8 @@
             "52b9378c24125654",
             "01623eb5e0832cd2"
         ],
-        "x": 84,
-        "y": 919,
+        "x": 64,
+        "y": 859,
         "w": 292,
         "h": 82
     },
@@ -114,184 +130,149 @@
         "h": 82
     },
     {
-        "id": "60f7b84422a23146",
+        "id": "c9c2e7f5355e7ea3",
         "type": "group",
-        "z": "29719104d6291d44",
-        "name": "get ids",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "e375eb45a99508cc",
-            "6d6e4ad704f681ba",
-            "8d3ec05d46f35b78"
-        ],
-        "x": 94,
-        "y": 1019,
-        "w": 462,
-        "h": 82
-    },
-    {
-        "id": "7ab65801a3095be9",
-        "type": "group",
-        "z": "29719104d6291d44",
-        "name": "clean ids",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "77f4e491a5a4d8f0",
-            "f84cb8fbe49f8816"
-        ],
-        "x": 74,
-        "y": 1119,
-        "w": 352,
-        "h": 82
-    },
-    {
-        "id": "264ccac2028ff316",
-        "type": "group",
-        "z": "29719104d6291d44",
+        "z": "a2cb632c74c1999c",
         "name": "wifi check",
         "style": {
             "label": true
         },
         "nodes": [
-            "361c0cd6448e5e11",
-            "5bfd88748ca6c6ff",
-            "f329b8b42adcb15c",
-            "2db8bae5746cca8a",
-            "fad59a683ce964ac",
-            "4fe9555143c25339",
-            "42ff19f6e6383224",
-            "0373b854d58514bc",
-            "012a8b5bb19f99a8",
-            "3e6d25944908fc72"
+            "a4b44aa3023bb136",
+            "da0a855f8988fe56",
+            "cf2f1318dcc79150",
+            "981e669d4589d974",
+            "1eca5a742e7c53e3",
+            "103527fc1f03fa19",
+            "d364125dfef5f330",
+            "c2186e56e5ce268c",
+            "5c6372ee8bac25de",
+            "7e57923fbccc927f"
         ],
-        "x": 74,
-        "y": 1439,
+        "x": 114,
+        "y": 219,
         "w": 892,
         "h": 162
     },
     {
-        "id": "bf3ee4aaf4678eac",
+        "id": "8a03b788f1979308",
         "type": "group",
-        "z": "29719104d6291d44",
+        "z": "a2cb632c74c1999c",
         "name": "recurrent wifi",
         "style": {
             "label": true
         },
         "nodes": [
-            "608c90b052d8a70a",
-            "598773f1fe6ed261"
+            "537fe7194a65ccb9",
+            "fcd122949e6a4a59"
         ],
-        "x": 94,
-        "y": 1659,
+        "x": 134,
+        "y": 439,
         "w": 392,
         "h": 82
     },
     {
-        "id": "962699017eb77de1",
+        "id": "ea4b339f97dbe608",
         "type": "group",
-        "z": "29719104d6291d44",
+        "z": "a2cb632c74c1999c",
         "name": "inyect ScannerId",
         "style": {
             "label": true
         },
         "nodes": [
-            "4784a3172bbf1404",
-            "caaeefa0255b3407",
-            "9c4cead4ec417012",
-            "a32f8aa4784be5ad",
-            "8f7d9c792c807b6e",
-            "a8b1ca5ea9300b5c",
-            "4748ff425c628cdf"
+            "40b895b286c4b31b",
+            "df3b304f44cf7544",
+            "9da34be87b02b07a",
+            "7497593b8352c848",
+            "3941ecbd587fb0a6",
+            "fea2cb2d1374e64a",
+            "ef3a2b58f2f9cb88"
         ],
-        "x": 74,
-        "y": 1299,
-        "w": 632,
+        "x": 114,
+        "y": 79,
+        "w": 652,
         "h": 122
     },
     {
-        "id": "09528afe6bef0de5",
+        "id": "77788d92355a854c",
         "type": "group",
-        "z": "29719104d6291d44",
-        "name": "websocket",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "32e34b4ea103d771",
-            "20abe9e1b1f7ee96",
-            "80cf6ca3f96b8451",
-            "fe494cedccc74971",
-            "3edd4cd11e8228a3"
-        ],
-        "x": 74,
-        "y": 1959,
-        "w": 552,
-        "h": 142
-    },
-    {
-        "id": "08508f1f4bd5e6e7",
-        "type": "group",
-        "z": "29719104d6291d44",
-        "name": "websocket test",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "e232708470630d6f",
-            "cf109ba3ba968e31",
-            "0d97fc053d86e964",
-            "779af63791490631"
-        ],
-        "x": 74,
-        "y": 1779,
-        "w": 412,
-        "h": 162
-    },
-    {
-        "id": "ca0d042bd9018e8e",
-        "type": "group",
-        "z": "29719104d6291d44",
-        "name": "websocket Response",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "2de3651f3864c0c7",
-            "575524cbc949b14a",
-            "5b8d9b010c1fa643",
-            "9642effdc72ad5b2",
-            "58ab21d5598741c3",
-            "7f3c6a73f0c43610",
-            "b4984081e5ee924f",
-            "c1ab235973370917",
-            "40e55c222db7b10a"
-        ],
-        "x": 94,
-        "y": 2139,
-        "w": 732,
-        "h": 222
-    },
-    {
-        "id": "c669a1cf9d8a82c1",
-        "type": "group",
-        "z": "29719104d6291d44",
+        "z": "a2cb632c74c1999c",
         "name": "get token",
         "style": {
             "label": true
         },
         "nodes": [
-            "87f320e87dea3ef8",
-            "e0671b865a920ed5",
-            "690cd6420ce3c9dd"
+            "229668aa4070c616",
+            "bd7a64def862e009",
+            "91ae695d134c9272"
         ],
-        "x": 114,
-        "y": 2419,
+        "x": 134,
+        "y": 579,
         "w": 632,
         "h": 82
+    },
+    {
+        "id": "011ba67085db0a79",
+        "type": "group",
+        "z": "8f6ceb50f45c3ecf",
+        "name": "websocket",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "287cf2f1fde8d7ac",
+            "25fd26fb3d5f392a",
+            "39ed7003b5323e60",
+            "6211c4ea1042167c",
+            "61925a0504d18f31"
+        ],
+        "x": 74,
+        "y": 219,
+        "w": 552,
+        "h": 142
+    },
+    {
+        "id": "b3cef6e616b52378",
+        "type": "group",
+        "z": "8f6ceb50f45c3ecf",
+        "name": "websocket test",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c69f4a064ad10954",
+            "8289bf3b5c7f841b",
+            "d7d97e6d4accacb2",
+            "03d0d6295da0b14b"
+        ],
+        "x": 74,
+        "y": 39,
+        "w": 412,
+        "h": 162
+    },
+    {
+        "id": "e1b52603c6938947",
+        "type": "group",
+        "z": "8f6ceb50f45c3ecf",
+        "name": "websocket Response",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b3e2ac18249e8b11",
+            "720aaaf16802b790",
+            "dd4b528cdb1142b3",
+            "ddb37b9f115fd152",
+            "e9cefc2668c6e9d1",
+            "26b6f5f2dd2e9980",
+            "43b33649c55b573a",
+            "c9ce451808d66da1",
+            "35e0f8281cac3066"
+        ],
+        "x": 94,
+        "y": 399,
+        "w": 732,
+        "h": 222
     },
     {
         "id": "f6b9339d315e79c8",
@@ -539,7 +520,7 @@
         "z": "29719104d6291d44",
         "g": "e42599f0157e6180",
         "name": "inyect Path",
-        "func": "const mac = flow.get(\"mac\") || false\n\nif (msg.payload !== \".DS_Store\"){\n\n    msg.delete = 0\n\n   if (mac === true) {\n        msg.filename = `${flow.get('path')}/${msg.payload}`\n        flow.set(\"filename\", msg.filename)\n        return msg\n\n    } else {\n        msg.filename = `${flow.get('path')}\\\\${msg.payload}`\n        flow.set(\"filename\", msg.filename)\n        return msg\n    }\n}else{\n    msg.filename = `${flow.get('path')}/${msg.payload}`\n    msg.delete = 1\n    return msg\n}",
+        "func": "const mac = global.get(\"mac\") || false\n\nif (msg.payload !== \".DS_Store\"){\n\n    msg.delete = 0\n\n   if (mac === true) {\n        msg.filename = `${flow.get('path')}/${msg.payload}`\n        flow.set(\"filename\", msg.filename)\n        return msg\n\n    } else {\n        msg.filename = `${flow.get('path')}\\\\${msg.payload}`\n        flow.set(\"filename\", msg.filename)\n        return msg\n    }\n}else{\n    msg.filename = `${flow.get('path')}/${msg.payload}`\n    msg.delete = 1\n    return msg\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -681,14 +662,14 @@
         "z": "29719104d6291d44",
         "g": "928414625d31ff23",
         "name": "extract id",
-        "func": "const example = msg.payload\n\nconst idNames = [\n    \"ID.TRA\",\n    \"ID TRA\",\n    \"ID. TRA\",\n    \"TRA\",\n    \"NO.TR\",\n    \"Tr\",\n    \"No.Tr\",\n    \"ID TRANSACCION\",\n    ]\n\nconst keys = Object.keys(example)\n\nlet foundKey = \"\"\n\nidNames.forEach(idName => {\n    const found = keys.find(key => key == idName)\n    \n    if(found !== undefined){\n        foundKey = found\n    }\n})\n\nmsg.payload = example[foundKey].trim()\n\nlet ids = flow.get(\"ids\")\n\nif(ids === undefined){\n    ids = []\n}\n\n\nconst idFound = ids.find(id => id === msg.payload)\n\n/*\nif(idFound === undefined){\n    ids.push(msg.payload)\n    flow.set(\"ids\",ids)\n    \n   \n    \n    msg.payload = {\n        topic   : \"ticket\",\n        message :  {\n            \"id_TRA\": msg.payload,\n            \"scannerId\": flow.get(\"scannerId\")\n        }\n    }\n    \n    return msg;\n}*/\n\nflow.set(\"id_TRA\", msg.payload.split(\" \")[0])\n\nmsg.payload = {\n    \"topic\": \"front\",\n    \"message\": {\n        \"id_TRA\": msg.payload.split(\" \")[0],\n        \"scannerId\": \"\",\n        \n    }\n}\n\nreturn msg\n\n\n\n\n\n",
+        "func": "const example = msg.payload\n\nconst idNames = [\n    \"ID.TRA\",\n    \"ID TRA\",\n    \"ID. TRA\",\n    \"TRA\",\n    \"NO.TR\",\n    \"Tr\",\n    \"No.Tr\",\n    \"ID TRANSACCION\",\n    ]\n\nconst keys = Object.keys(example)\n\nlet foundKey = \"\"\n\nidNames.forEach(idName => {\n    const found = keys.find(key => key == idName)\n    \n    if(found !== undefined){\n        foundKey = found\n    }\n})\n\nmsg.payload = example[foundKey].trim()\n\nlet ids = flow.get(\"ids\")\n\nif(ids === undefined){\n    ids = []\n}\n\n\nconst idFound = ids.find(id => id === msg.payload)\n\n/*\nif(idFound === undefined){\n    ids.push(msg.payload)\n    flow.set(\"ids\",ids)\n    \n   \n    \n    msg.payload = {\n        topic   : \"ticket\",\n        message :  {\n            \"id_TRA\": msg.payload,\n            \"scannerId\": flow.get(\"scannerId\")\n        }\n    }\n    \n    return msg;\n}*/\n\nglobal.set(\"id_TRA\", msg.payload.split(\" \")[0])\n\nmsg.payload = {\n    \"topic\": \"front\",\n    \"message\": {\n        \"id_TRA\": msg.payload.split(\" \")[0],\n        \"scannerId\": \"\",\n        \n    }\n}\n\nreturn msg",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
-        "y": 960,
+        "x": 200,
+        "y": 900,
         "wires": [
             [
                 "01623eb5e0832cd2"
@@ -719,8 +700,8 @@
         "links": [
             "e9a630128f46d513"
         ],
-        "x": 125,
-        "y": 960,
+        "x": 105,
+        "y": 900,
         "wires": [
             [
                 "5d1d1b57fcb62f41"
@@ -750,10 +731,11 @@
         "name": "link out 7",
         "mode": "link",
         "links": [
-            "3edd4cd11e8228a3"
+            "3edd4cd11e8228a3",
+            "61925a0504d18f31"
         ],
-        "x": 335,
-        "y": 960,
+        "x": 315,
+        "y": 900,
         "wires": []
     },
     {
@@ -787,7 +769,9 @@
             "8d3ec05d46f35b78",
             "779af63791490631",
             "42ff19f6e6383224",
-            "e9a630128f46d513"
+            "e9a630128f46d513",
+            "d364125dfef5f330",
+            "03d0d6295da0b14b"
         ],
         "x": 715,
         "y": 780,
@@ -796,78 +780,6 @@
                 "0f5e5dc41b5ed50f"
             ]
         ]
-    },
-    {
-        "id": "e375eb45a99508cc",
-        "type": "inject",
-        "z": "29719104d6291d44",
-        "g": "60f7b84422a23146",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 200,
-        "y": 1060,
-        "wires": [
-            [
-                "6d6e4ad704f681ba"
-            ]
-        ]
-    },
-    {
-        "id": "6d6e4ad704f681ba",
-        "type": "change",
-        "z": "29719104d6291d44",
-        "g": "60f7b84422a23146",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "ids",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 380,
-        "y": 1060,
-        "wires": [
-            [
-                "8d3ec05d46f35b78"
-            ]
-        ]
-    },
-    {
-        "id": "8d3ec05d46f35b78",
-        "type": "link out",
-        "z": "29719104d6291d44",
-        "g": "60f7b84422a23146",
-        "name": "link out 8",
-        "mode": "link",
-        "links": [
-            "0e793c467675e12e"
-        ],
-        "x": 515,
-        "y": 1060,
-        "wires": []
     },
     {
         "id": "6c859df67bd280e0",
@@ -884,547 +796,6 @@
         "wires": []
     },
     {
-        "id": "77f4e491a5a4d8f0",
-        "type": "inject",
-        "z": "29719104d6291d44",
-        "g": "7ab65801a3095be9",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 180,
-        "y": 1160,
-        "wires": [
-            [
-                "f84cb8fbe49f8816"
-            ]
-        ]
-    },
-    {
-        "id": "f84cb8fbe49f8816",
-        "type": "change",
-        "z": "29719104d6291d44",
-        "g": "7ab65801a3095be9",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ids",
-                "pt": "flow",
-                "to": "[]",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 330,
-        "y": 1160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "32e34b4ea103d771",
-        "type": "websocket out",
-        "z": "29719104d6291d44",
-        "g": "09528afe6bef0de5",
-        "name": "susuerteWebsocket",
-        "server": "",
-        "client": "49b1776fbf1ce66a",
-        "x": 510,
-        "y": 2020,
-        "wires": []
-    },
-    {
-        "id": "20abe9e1b1f7ee96",
-        "type": "inject",
-        "z": "29719104d6291d44",
-        "g": "09528afe6bef0de5",
-        "name": "test",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "v": "\"hola\"",
-                "vt": "json"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"topic\":\"front\",\"message\":{\"id_TRA\":\"5815861107\",\"scannerId\":\"\"}}",
-        "payloadType": "json",
-        "x": 170,
-        "y": 2000,
-        "wires": [
-            [
-                "fe494cedccc74971"
-            ]
-        ]
-    },
-    {
-        "id": "361c0cd6448e5e11",
-        "type": "inject",
-        "z": "29719104d6291d44",
-        "g": "264ccac2028ff316",
-        "name": "init",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "6",
-        "topic": "",
-        "payload": "{\"topic\":\"init\",\"message\":{\"scannerId\":\"\"}}",
-        "payloadType": "json",
-        "x": 170,
-        "y": 1560,
-        "wires": [
-            [
-                "5bfd88748ca6c6ff",
-                "3e6d25944908fc72"
-            ]
-        ]
-    },
-    {
-        "id": "2db8bae5746cca8a",
-        "type": "delay",
-        "z": "29719104d6291d44",
-        "g": "264ccac2028ff316",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 640,
-        "y": 1560,
-        "wires": [
-            [
-                "5bfd88748ca6c6ff",
-                "0373b854d58514bc"
-            ]
-        ]
-    },
-    {
-        "id": "80cf6ca3f96b8451",
-        "type": "link in",
-        "z": "29719104d6291d44",
-        "g": "09528afe6bef0de5",
-        "name": "link in 8",
-        "links": [
-            "4fe9555143c25339",
-            "a32f8aa4784be5ad",
-            "f847d761b4a5b9aa",
-            "7f3c6a73f0c43610"
-        ],
-        "x": 255,
-        "y": 2060,
-        "wires": [
-            [
-                "32e34b4ea103d771"
-            ]
-        ]
-    },
-    {
-        "id": "fad59a683ce964ac",
-        "type": "change",
-        "z": "29719104d6291d44",
-        "g": "264ccac2028ff316",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "init",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 660,
-        "y": 1520,
-        "wires": [
-            [
-                "4fe9555143c25339"
-            ]
-        ]
-    },
-    {
-        "id": "4fe9555143c25339",
-        "type": "link out",
-        "z": "29719104d6291d44",
-        "g": "264ccac2028ff316",
-        "name": "link out 11",
-        "mode": "link",
-        "links": [
-            "80cf6ca3f96b8451"
-        ],
-        "x": 785,
-        "y": 1520,
-        "wires": []
-    },
-    {
-        "id": "42ff19f6e6383224",
-        "type": "link out",
-        "z": "29719104d6291d44",
-        "g": "264ccac2028ff316",
-        "name": "link out 12",
-        "mode": "link",
-        "links": [
-            "0e793c467675e12e"
-        ],
-        "x": 925,
-        "y": 1560,
-        "wires": []
-    },
-    {
-        "id": "0373b854d58514bc",
-        "type": "function",
-        "z": "29719104d6291d44",
-        "g": "264ccac2028ff316",
-        "name": "msg",
-        "func": "msg.payload = \"Sin Internet\"\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 790,
-        "y": 1560,
-        "wires": [
-            [
-                "42ff19f6e6383224"
-            ]
-        ]
-    },
-    {
-        "id": "608c90b052d8a70a",
-        "type": "inject",
-        "z": "29719104d6291d44",
-        "g": "bf3ee4aaf4678eac",
-        "name": "recurrent internet",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 230,
-        "y": 1700,
-        "wires": [
-            [
-                "598773f1fe6ed261"
-            ]
-        ]
-    },
-    {
-        "id": "012a8b5bb19f99a8",
-        "type": "change",
-        "z": "29719104d6291d44",
-        "g": "264ccac2028ff316",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "init",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 530,
-        "y": 1480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4784a3172bbf1404",
-        "type": "inject",
-        "z": "29719104d6291d44",
-        "g": "962699017eb77de1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "2",
-        "topic": "",
-        "payload": "{\"topic\":\"setScannerId\",\"message\":{\"scannerId\":\"\"}}",
-        "payloadType": "json",
-        "x": 170,
-        "y": 1340,
-        "wires": [
-            [
-                "9c4cead4ec417012",
-                "a8b1ca5ea9300b5c"
-            ]
-        ]
-    },
-    {
-        "id": "2de3651f3864c0c7",
-        "type": "websocket in",
-        "z": "29719104d6291d44",
-        "g": "ca0d042bd9018e8e",
-        "name": "susuerteWebsocket",
-        "server": "",
-        "client": "49b1776fbf1ce66a",
-        "x": 210,
-        "y": 2200,
-        "wires": [
-            [
-                "575524cbc949b14a"
-            ]
-        ]
-    },
-    {
-        "id": "575524cbc949b14a",
-        "type": "json",
-        "z": "29719104d6291d44",
-        "g": "ca0d042bd9018e8e",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 390,
-        "y": 2200,
-        "wires": [
-            [
-                "c1ab235973370917"
-            ]
-        ]
-    },
-    {
-        "id": "e232708470630d6f",
-        "type": "websocket out",
-        "z": "29719104d6291d44",
-        "g": "08508f1f4bd5e6e7",
-        "name": "testWebsocket",
-        "server": "",
-        "client": "49b1776fbf1ce66a",
-        "x": 380,
-        "y": 1820,
-        "wires": []
-    },
-    {
-        "id": "cf109ba3ba968e31",
-        "type": "inject",
-        "z": "29719104d6291d44",
-        "g": "08508f1f4bd5e6e7",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 200,
-        "y": 1820,
-        "wires": [
-            [
-                "e232708470630d6f"
-            ]
-        ]
-    },
-    {
-        "id": "0d97fc053d86e964",
-        "type": "websocket in",
-        "z": "29719104d6291d44",
-        "g": "08508f1f4bd5e6e7",
-        "name": "testWebsocket",
-        "server": "",
-        "client": "49b1776fbf1ce66a",
-        "x": 180,
-        "y": 1900,
-        "wires": [
-            [
-                "779af63791490631"
-            ]
-        ]
-    },
-    {
-        "id": "3e6d25944908fc72",
-        "type": "function",
-        "z": "29719104d6291d44",
-        "g": "264ccac2028ff316",
-        "name": "getScannerId",
-        "func": "msg.payload.message.scannerId = flow.get(\"scannerId\")\nmsg.payload.message.token = flow.get(\"token\")\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 350,
-        "y": 1480,
-        "wires": [
-            [
-                "012a8b5bb19f99a8"
-            ]
-        ]
-    },
-    {
-        "id": "fe494cedccc74971",
-        "type": "function",
-        "z": "29719104d6291d44",
-        "g": "09528afe6bef0de5",
-        "name": "getScannerId",
-        "func": "msg.payload.message.scannerId = flow.get(\"scannerId\")\nmsg.payload.message.token = flow.get(\"token\")\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 2000,
-        "wires": [
-            [
-                "32e34b4ea103d771"
-            ]
-        ]
-    },
-    {
-        "id": "779af63791490631",
-        "type": "link out",
-        "z": "29719104d6291d44",
-        "g": "08508f1f4bd5e6e7",
-        "name": "link out 13",
-        "mode": "link",
-        "links": [
-            "0e793c467675e12e"
-        ],
-        "x": 385,
-        "y": 1900,
-        "wires": []
-    },
-    {
-        "id": "caaeefa0255b3407",
-        "type": "function",
-        "z": "29719104d6291d44",
-        "g": "962699017eb77de1",
-        "name": "getScannerId",
-        "func": "msg.payload.message.scannerId = flow.get(\"scannerId\")\nmsg.payload.message.token = flow.get(\"token\")\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 1380,
-        "wires": [
-            [
-                "a32f8aa4784be5ad"
-            ]
-        ]
-    },
-    {
-        "id": "9c4cead4ec417012",
-        "type": "delay",
-        "z": "29719104d6291d44",
-        "g": "962699017eb77de1",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 320,
-        "y": 1380,
-        "wires": [
-            [
-                "caaeefa0255b3407"
-            ]
-        ]
-    },
-    {
-        "id": "a32f8aa4784be5ad",
-        "type": "link out",
-        "z": "29719104d6291d44",
-        "g": "962699017eb77de1",
-        "name": "link out 14",
-        "mode": "link",
-        "links": [
-            "80cf6ca3f96b8451"
-        ],
-        "x": 605,
-        "y": 1380,
-        "wires": []
-    },
-    {
         "id": "5f059ae1919a647d",
         "type": "change",
         "z": "29719104d6291d44",
@@ -1434,7 +805,7 @@
             {
                 "t": "set",
                 "p": "image64",
-                "pt": "flow",
+                "pt": "global",
                 "to": "payload",
                 "tot": "msg"
             }
@@ -1446,340 +817,6 @@
         "reg": false,
         "x": 590,
         "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5b8d9b010c1fa643",
-        "type": "function",
-        "z": "29719104d6291d44",
-        "g": "ca0d042bd9018e8e",
-        "name": "Recurrent Tasks",
-        "func": "const canSendImage = flow.get(\"canSendImage\")\nconst canRegisterTicket = flow.get(\"canRegisterTicket\")\n\nif(canRegisterTicket === true){\n\n    // send the message to create a new ticket\n   const message = {\n        topic : \"ticket\",\n        message : {\n            \"id_TRA\": flow.get(\"id_TRA\"),\n            scannerId : flow.get(\"scannerId\"),\n            token : flow.get(\"token\"),\n            ticketInfo : flow.get(\"ticketInfo\")\n        }\n    }\n    \n    flow.set(\"canRegisterTicket\", false)\n\n    msg.payload = Buffer.from(JSON.stringify(message))\n    \n    return msg; \n}\n\nif(canSendImage === true){\n   const message = {\n        topic : \"imageSend\",\n        message : {\n            image : flow.get(\"image64\"),\n            scannerId : flow.get(\"scannerId\")\n        }\n    }\n    \n    flow.set(\"canSendImage\", false)\n\n    msg.payload = Buffer.from(JSON.stringify(message))\n    \n    return msg; \n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 380,
-        "y": 2320,
-        "wires": [
-            [
-                "7f3c6a73f0c43610"
-            ]
-        ]
-    },
-    {
-        "id": "9642effdc72ad5b2",
-        "type": "inject",
-        "z": "29719104d6291d44",
-        "g": "ca0d042bd9018e8e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 210,
-        "y": 2320,
-        "wires": [
-            [
-                "5b8d9b010c1fa643"
-            ]
-        ]
-    },
-    {
-        "id": "58ab21d5598741c3",
-        "type": "function",
-        "z": "29719104d6291d44",
-        "g": "ca0d042bd9018e8e",
-        "name": "canSendImage",
-        "func": "const canSendImage = flow.get(\"canSendImage\")\n\nif(canSendImage === undefined){\n    flow.set(\"canSendImage\", true)\n}\n\nif(canSendImage === false){\n    flow.set(\"canSendImage\", true)\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 700,
-        "y": 2260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7f3c6a73f0c43610",
-        "type": "link out",
-        "z": "29719104d6291d44",
-        "g": "ca0d042bd9018e8e",
-        "name": "link out 15",
-        "mode": "link",
-        "links": [
-            "80cf6ca3f96b8451"
-        ],
-        "x": 505,
-        "y": 2320,
-        "wires": []
-    },
-    {
-        "id": "3edd4cd11e8228a3",
-        "type": "link in",
-        "z": "29719104d6291d44",
-        "g": "09528afe6bef0de5",
-        "name": "link in 9",
-        "links": [
-            "01623eb5e0832cd2"
-        ],
-        "x": 195,
-        "y": 2040,
-        "wires": [
-            [
-                "fe494cedccc74971",
-                "199f0606fd96b330"
-            ]
-        ]
-    },
-    {
-        "id": "b4984081e5ee924f",
-        "type": "function",
-        "z": "29719104d6291d44",
-        "g": "ca0d042bd9018e8e",
-        "name": "canRegisterTicket",
-        "func": "const canSendImage = flow.get(\"canRegisterTicket\")\n\n// set the information of the ticket raffleDate and prize\nflow.set(\"ticketInfo\", msg.payload.message.ticketInfo)\n\nif(canSendImage === undefined){\n    flow.set(\"canRegisterTicket\", true)\n}\n\nif(canSendImage === false){\n    flow.set(\"canRegisterTicket\", true)\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 710,
-        "y": 2220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c1ab235973370917",
-        "type": "switch",
-        "z": "29719104d6291d44",
-        "g": "ca0d042bd9018e8e",
-        "name": "",
-        "property": "payload.topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "error",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "imageRequest",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "OK",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 530,
-        "y": 2200,
-        "wires": [
-            [
-                "40e55c222db7b10a"
-            ],
-            [
-                "b4984081e5ee924f"
-            ],
-            [
-                "58ab21d5598741c3"
-            ]
-        ]
-    },
-    {
-        "id": "40e55c222db7b10a",
-        "type": "change",
-        "z": "29719104d6291d44",
-        "g": "ca0d042bd9018e8e",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.message",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 680,
-        "y": 2180,
-        "wires": [
-            [
-                "881bcebe431eb544"
-            ]
-        ]
-    },
-    {
-        "id": "a8b1ca5ea9300b5c",
-        "type": "file in",
-        "z": "29719104d6291d44",
-        "g": "962699017eb77de1",
-        "name": "config",
-        "filename": "/Users/matador/code/susuerte-develop/falconBot/config/config.json",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 310,
-        "y": 1340,
-        "wires": [
-            [
-                "4748ff425c628cdf"
-            ]
-        ]
-    },
-    {
-        "id": "4748ff425c628cdf",
-        "type": "json",
-        "z": "29719104d6291d44",
-        "g": "962699017eb77de1",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 430,
-        "y": 1340,
-        "wires": [
-            [
-                "8f7d9c792c807b6e",
-                "7dbae6a8317614a4"
-            ]
-        ]
-    },
-    {
-        "id": "8f7d9c792c807b6e",
-        "type": "change",
-        "z": "29719104d6291d44",
-        "g": "962699017eb77de1",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "scannerId",
-                "pt": "flow",
-                "to": "payload.scannerId",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 590,
-        "y": 1340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e0671b865a920ed5",
-        "type": "inject",
-        "z": "29719104d6291d44",
-        "g": "c669a1cf9d8a82c1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "5",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 230,
-        "y": 2460,
-        "wires": [
-            [
-                "87f320e87dea3ef8"
-            ]
-        ]
-    },
-    {
-        "id": "690cd6420ce3c9dd",
-        "type": "change",
-        "z": "29719104d6291d44",
-        "g": "c669a1cf9d8a82c1",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "token",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 640,
-        "y": 2460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7dbae6a8317614a4",
-        "type": "change",
-        "z": "29719104d6291d44",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "mac",
-                "pt": "flow",
-                "to": "payload.mac",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 570,
-        "y": 1280,
         "wires": [
             []
         ]
@@ -1888,43 +925,6 @@
         ]
     },
     {
-        "id": "87f320e87dea3ef8",
-        "type": "axios-request",
-        "z": "29719104d6291d44",
-        "g": "c669a1cf9d8a82c1",
-        "name": "susuerteBack",
-        "endpoint": "26cf54f551937318",
-        "method": "get",
-        "url": "",
-        "responseType": "json",
-        "keepAlive": false,
-        "timeout": 30000,
-        "validateStatus": true,
-        "headers": [
-            {
-                "keyType": "str",
-                "keyValue": "Content-Type",
-                "valueType": "str",
-                "valueValue": "application/json"
-            }
-        ],
-        "params": [
-            {
-                "keyType": "str",
-                "keyValue": "scannerId",
-                "valueType": "flow",
-                "valueValue": "scannerId"
-            }
-        ],
-        "x": 430,
-        "y": 2460,
-        "wires": [
-            [
-                "690cd6420ce3c9dd"
-            ]
-        ]
-    },
-    {
         "id": "43c70d2c7dd175cd",
         "type": "array-loop",
         "z": "29719104d6291d44",
@@ -1942,28 +942,6 @@
             [],
             [
                 "24271c3da0618293"
-            ]
-        ]
-    },
-    {
-        "id": "f329b8b42adcb15c",
-        "type": "while-loop",
-        "z": "29719104d6291d44",
-        "g": "264ccac2028ff316",
-        "name": "checkOnline",
-        "condi": "!msg.payload",
-        "limit": false,
-        "limitTime": 10000,
-        "time": "wl4d53ad71638c0354",
-        "timeType": "msg",
-        "x": 490,
-        "y": 1560,
-        "wires": [
-            [
-                "fad59a683ce964ac"
-            ],
-            [
-                "2db8bae5746cca8a"
             ]
         ]
     },
@@ -2006,38 +984,6 @@
         ]
     },
     {
-        "id": "5bfd88748ca6c6ff",
-        "type": "is online",
-        "z": "29719104d6291d44",
-        "g": "264ccac2028ff316",
-        "name": "",
-        "url": "",
-        "action": "0",
-        "x": 340,
-        "y": 1560,
-        "wires": [
-            [
-                "f329b8b42adcb15c"
-            ]
-        ]
-    },
-    {
-        "id": "598773f1fe6ed261",
-        "type": "is online",
-        "z": "29719104d6291d44",
-        "g": "bf3ee4aaf4678eac",
-        "name": "",
-        "url": "",
-        "action": "2",
-        "x": 400,
-        "y": 1700,
-        "wires": [
-            [
-                "f329b8b42adcb15c"
-            ]
-        ]
-    },
-    {
         "id": "6e5e83b8697e5eaf",
         "type": "image viewer",
         "z": "29719104d6291d44",
@@ -2046,26 +992,940 @@
         "data": "payload",
         "dataType": "msg",
         "active": true,
-        "x": 630,
+        "x": 590,
         "y": 40,
         "wires": [
             []
         ]
     },
     {
-        "id": "881bcebe431eb544",
-        "type": "play audio",
-        "z": "29719104d6291d44",
+        "id": "012ccaeade39be19",
+        "type": "change",
+        "z": "a2cb632c74c1999c",
         "name": "",
-        "voice": "0",
-        "x": 930,
-        "y": 2180,
+        "rules": [
+            {
+                "t": "set",
+                "p": "mac",
+                "pt": "global",
+                "to": "payload.mac",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a4b44aa3023bb136",
+        "type": "inject",
+        "z": "a2cb632c74c1999c",
+        "g": "c9c2e7f5355e7ea3",
+        "name": "init",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "6",
+        "topic": "",
+        "payload": "{\"topic\":\"init\",\"message\":{\"scannerId\":\"\"}}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "7e57923fbccc927f",
+                "da0a855f8988fe56"
+            ]
+        ]
+    },
+    {
+        "id": "da0a855f8988fe56",
+        "type": "is online",
+        "z": "a2cb632c74c1999c",
+        "g": "c9c2e7f5355e7ea3",
+        "name": "",
+        "url": "",
+        "action": "0",
+        "x": 380,
+        "y": 340,
+        "wires": [
+            [
+                "cf2f1318dcc79150"
+            ]
+        ]
+    },
+    {
+        "id": "cf2f1318dcc79150",
+        "type": "while-loop",
+        "z": "a2cb632c74c1999c",
+        "g": "c9c2e7f5355e7ea3",
+        "name": "checkOnline",
+        "condi": "!msg.payload",
+        "limit": false,
+        "limitTime": 10000,
+        "time": "wl4d53ad71638c0354",
+        "timeType": "msg",
+        "x": 530,
+        "y": 340,
+        "wires": [
+            [
+                "1eca5a742e7c53e3"
+            ],
+            [
+                "981e669d4589d974"
+            ]
+        ]
+    },
+    {
+        "id": "981e669d4589d974",
+        "type": "delay",
+        "z": "a2cb632c74c1999c",
+        "g": "c9c2e7f5355e7ea3",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 340,
+        "wires": [
+            [
+                "c2186e56e5ce268c",
+                "da0a855f8988fe56"
+            ]
+        ]
+    },
+    {
+        "id": "1eca5a742e7c53e3",
+        "type": "change",
+        "z": "a2cb632c74c1999c",
+        "g": "c9c2e7f5355e7ea3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "init",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 300,
+        "wires": [
+            [
+                "103527fc1f03fa19"
+            ]
+        ]
+    },
+    {
+        "id": "103527fc1f03fa19",
+        "type": "link out",
+        "z": "a2cb632c74c1999c",
+        "g": "c9c2e7f5355e7ea3",
+        "name": "link out 17",
+        "mode": "link",
+        "links": [
+            "80cf6ca3f96b8451",
+            "39ed7003b5323e60"
+        ],
+        "x": 825,
+        "y": 300,
         "wires": []
     },
     {
-        "id": "199f0606fd96b330",
+        "id": "d364125dfef5f330",
+        "type": "link out",
+        "z": "a2cb632c74c1999c",
+        "g": "c9c2e7f5355e7ea3",
+        "name": "link out 18",
+        "mode": "link",
+        "links": [
+            "0e793c467675e12e"
+        ],
+        "x": 965,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c2186e56e5ce268c",
+        "type": "function",
+        "z": "a2cb632c74c1999c",
+        "g": "c9c2e7f5355e7ea3",
+        "name": "msg",
+        "func": "msg.payload = \"Sin Internet\"\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 340,
+        "wires": [
+            [
+                "d364125dfef5f330"
+            ]
+        ]
+    },
+    {
+        "id": "5c6372ee8bac25de",
+        "type": "change",
+        "z": "a2cb632c74c1999c",
+        "g": "c9c2e7f5355e7ea3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "init",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e57923fbccc927f",
+        "type": "function",
+        "z": "a2cb632c74c1999c",
+        "g": "c9c2e7f5355e7ea3",
+        "name": "getScannerId",
+        "func": "msg.payload.message.scannerId = flow.get(\"scannerId\")\nmsg.payload.message.token = flow.get(\"token\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 260,
+        "wires": [
+            [
+                "5c6372ee8bac25de"
+            ]
+        ]
+    },
+    {
+        "id": "537fe7194a65ccb9",
+        "type": "inject",
+        "z": "a2cb632c74c1999c",
+        "g": "8a03b788f1979308",
+        "name": "recurrent internet",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 480,
+        "wires": [
+            [
+                "fcd122949e6a4a59"
+            ]
+        ]
+    },
+    {
+        "id": "fcd122949e6a4a59",
+        "type": "is online",
+        "z": "a2cb632c74c1999c",
+        "g": "8a03b788f1979308",
+        "name": "",
+        "url": "",
+        "action": "2",
+        "x": 440,
+        "y": 480,
+        "wires": [
+            [
+                "cf2f1318dcc79150"
+            ]
+        ]
+    },
+    {
+        "id": "40b895b286c4b31b",
+        "type": "inject",
+        "z": "a2cb632c74c1999c",
+        "g": "ea4b339f97dbe608",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "{\"topic\":\"setScannerId\",\"message\":{\"scannerId\":\"\"}}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 120,
+        "wires": [
+            [
+                "fea2cb2d1374e64a",
+                "9da34be87b02b07a"
+            ]
+        ]
+    },
+    {
+        "id": "df3b304f44cf7544",
+        "type": "function",
+        "z": "a2cb632c74c1999c",
+        "g": "ea4b339f97dbe608",
+        "name": "getScannerId",
+        "func": "msg.payload.message.scannerId = flow.get(\"scannerId\")\nmsg.payload.message.token = flow.get(\"token\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 160,
+        "wires": [
+            [
+                "7497593b8352c848"
+            ]
+        ]
+    },
+    {
+        "id": "9da34be87b02b07a",
+        "type": "delay",
+        "z": "a2cb632c74c1999c",
+        "g": "ea4b339f97dbe608",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "df3b304f44cf7544"
+            ]
+        ]
+    },
+    {
+        "id": "7497593b8352c848",
+        "type": "link out",
+        "z": "a2cb632c74c1999c",
+        "g": "ea4b339f97dbe608",
+        "name": "link out 19",
+        "mode": "link",
+        "links": [
+            "80cf6ca3f96b8451",
+            "39ed7003b5323e60"
+        ],
+        "x": 645,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "3941ecbd587fb0a6",
+        "type": "change",
+        "z": "a2cb632c74c1999c",
+        "g": "ea4b339f97dbe608",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "scannerId",
+                "pt": "global",
+                "to": "payload.scannerId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fea2cb2d1374e64a",
+        "type": "file in",
+        "z": "a2cb632c74c1999c",
+        "g": "ea4b339f97dbe608",
+        "name": "config",
+        "filename": "/Users/matador/code/susuerte-develop/falconBot/config/config.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 350,
+        "y": 120,
+        "wires": [
+            [
+                "ef3a2b58f2f9cb88"
+            ]
+        ]
+    },
+    {
+        "id": "ef3a2b58f2f9cb88",
+        "type": "json",
+        "z": "a2cb632c74c1999c",
+        "g": "ea4b339f97dbe608",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 120,
+        "wires": [
+            [
+                "012ccaeade39be19",
+                "3941ecbd587fb0a6"
+            ]
+        ]
+    },
+    {
+        "id": "229668aa4070c616",
+        "type": "axios-request",
+        "z": "a2cb632c74c1999c",
+        "g": "77788d92355a854c",
+        "name": "susuerteBack",
+        "endpoint": "26cf54f551937318",
+        "method": "get",
+        "url": "",
+        "responseType": "json",
+        "keepAlive": false,
+        "timeout": 30000,
+        "validateStatus": true,
+        "headers": [
+            {
+                "keyType": "str",
+                "keyValue": "Content-Type",
+                "valueType": "str",
+                "valueValue": "application/json"
+            }
+        ],
+        "params": [
+            {
+                "keyType": "str",
+                "keyValue": "scannerId",
+                "valueType": "global",
+                "valueValue": "scannerId"
+            }
+        ],
+        "x": 450,
+        "y": 620,
+        "wires": [
+            [
+                "91ae695d134c9272"
+            ]
+        ]
+    },
+    {
+        "id": "bd7a64def862e009",
+        "type": "inject",
+        "z": "a2cb632c74c1999c",
+        "g": "77788d92355a854c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 620,
+        "wires": [
+            [
+                "229668aa4070c616"
+            ]
+        ]
+    },
+    {
+        "id": "91ae695d134c9272",
+        "type": "change",
+        "z": "a2cb632c74c1999c",
+        "g": "77788d92355a854c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "token",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c354ce6105be0c5d",
+        "type": "play audio",
+        "z": "8f6ceb50f45c3ecf",
+        "name": "",
+        "voice": "0",
+        "x": 930,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "287cf2f1fde8d7ac",
+        "type": "websocket out",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "011ba67085db0a79",
+        "name": "susuerteWebsocket",
+        "server": "",
+        "client": "49b1776fbf1ce66a",
+        "x": 510,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "25fd26fb3d5f392a",
+        "type": "inject",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "011ba67085db0a79",
+        "name": "test",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "\"hola\"",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"topic\":\"front\",\"message\":{\"id_TRA\":\"5815861107\",\"scannerId\":\"\"}}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "6211c4ea1042167c"
+            ]
+        ]
+    },
+    {
+        "id": "39ed7003b5323e60",
+        "type": "link in",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "011ba67085db0a79",
+        "name": "link in 11",
+        "links": [
+            "4fe9555143c25339",
+            "a32f8aa4784be5ad",
+            "f847d761b4a5b9aa",
+            "26b6f5f2dd2e9980",
+            "103527fc1f03fa19",
+            "7497593b8352c848"
+        ],
+        "x": 255,
+        "y": 320,
+        "wires": [
+            [
+                "287cf2f1fde8d7ac"
+            ]
+        ]
+    },
+    {
+        "id": "6211c4ea1042167c",
+        "type": "function",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "011ba67085db0a79",
+        "name": "getScannerId",
+        "func": "msg.payload.message.scannerId = global.get(\"scannerId\")\nmsg.payload.message.token = global.get(\"token\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "287cf2f1fde8d7ac"
+            ]
+        ]
+    },
+    {
+        "id": "61925a0504d18f31",
+        "type": "link in",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "011ba67085db0a79",
+        "name": "link in 12",
+        "links": [
+            "01623eb5e0832cd2"
+        ],
+        "x": 195,
+        "y": 300,
+        "wires": [
+            [
+                "6211c4ea1042167c",
+                "6a2761a8451c2c96"
+            ]
+        ]
+    },
+    {
+        "id": "c69f4a064ad10954",
+        "type": "websocket out",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "b3cef6e616b52378",
+        "name": "testWebsocket",
+        "server": "",
+        "client": "49b1776fbf1ce66a",
+        "x": 380,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8289bf3b5c7f841b",
+        "type": "inject",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "b3cef6e616b52378",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "c69f4a064ad10954"
+            ]
+        ]
+    },
+    {
+        "id": "d7d97e6d4accacb2",
+        "type": "websocket in",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "b3cef6e616b52378",
+        "name": "testWebsocket",
+        "server": "",
+        "client": "49b1776fbf1ce66a",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "03d0d6295da0b14b"
+            ]
+        ]
+    },
+    {
+        "id": "03d0d6295da0b14b",
+        "type": "link out",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "b3cef6e616b52378",
+        "name": "link out 20",
+        "mode": "link",
+        "links": [
+            "0e793c467675e12e"
+        ],
+        "x": 385,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b3e2ac18249e8b11",
+        "type": "websocket in",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "e1b52603c6938947",
+        "name": "susuerteWebsocket",
+        "server": "",
+        "client": "49b1776fbf1ce66a",
+        "x": 210,
+        "y": 460,
+        "wires": [
+            [
+                "720aaaf16802b790"
+            ]
+        ]
+    },
+    {
+        "id": "720aaaf16802b790",
+        "type": "json",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "e1b52603c6938947",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 390,
+        "y": 460,
+        "wires": [
+            [
+                "c9ce451808d66da1"
+            ]
+        ]
+    },
+    {
+        "id": "dd4b528cdb1142b3",
+        "type": "function",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "e1b52603c6938947",
+        "name": "Recurrent Tasks",
+        "func": "const canSendImage = flow.get(\"canSendImage\")\nconst canRegisterTicket = flow.get(\"canRegisterTicket\")\n\nif(canRegisterTicket === true){\n\n    // send the message to create a new ticket\n   const message = {\n        topic : \"ticket\",\n        message : {\n            \"id_TRA\": global.get(\"id_TRA\"),\n            scannerId : global.get(\"scannerId\"),\n            token : global.get(\"token\"),\n            ticketInfo : flow.get(\"ticketInfo\")\n        }\n    }\n    \n    flow.set(\"canRegisterTicket\", false)\n\n    msg.payload = Buffer.from(JSON.stringify(message))\n    \n    return msg; \n}\n\nif(canSendImage === true){\n   const message = {\n        topic : \"imageSend\",\n        message : {\n            image : global.get(\"image64\"),\n            scannerId : global.get(\"scannerId\")\n        }\n    }\n    \n    flow.set(\"canSendImage\", false)\n\n    msg.payload = Buffer.from(JSON.stringify(message))\n    \n    return msg; \n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 580,
+        "wires": [
+            [
+                "26b6f5f2dd2e9980"
+            ]
+        ]
+    },
+    {
+        "id": "ddb37b9f115fd152",
+        "type": "inject",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "e1b52603c6938947",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 580,
+        "wires": [
+            [
+                "dd4b528cdb1142b3"
+            ]
+        ]
+    },
+    {
+        "id": "e9cefc2668c6e9d1",
+        "type": "function",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "e1b52603c6938947",
+        "name": "canSendImage",
+        "func": "const canSendImage = flow.get(\"canSendImage\")\n\nif(canSendImage === undefined){\n    flow.set(\"canSendImage\", true)\n}\n\nif(canSendImage === false){\n    flow.set(\"canSendImage\", true)\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "26b6f5f2dd2e9980",
+        "type": "link out",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "e1b52603c6938947",
+        "name": "link out 21",
+        "mode": "link",
+        "links": [
+            "39ed7003b5323e60"
+        ],
+        "x": 505,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "43b33649c55b573a",
+        "type": "function",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "e1b52603c6938947",
+        "name": "canRegisterTicket",
+        "func": "const canSendImage = flow.get(\"canRegisterTicket\")\n\n// set the information of the ticket raffleDate and prize\nflow.set(\"ticketInfo\", msg.payload.message.ticketInfo)\n\nif(canSendImage === undefined){\n    flow.set(\"canRegisterTicket\", true)\n}\n\nif(canSendImage === false){\n    flow.set(\"canRegisterTicket\", true)\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c9ce451808d66da1",
+        "type": "switch",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "e1b52603c6938947",
+        "name": "",
+        "property": "payload.topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "error",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "imageRequest",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 530,
+        "y": 460,
+        "wires": [
+            [
+                "35e0f8281cac3066"
+            ],
+            [
+                "43b33649c55b573a"
+            ],
+            [
+                "e9cefc2668c6e9d1"
+            ]
+        ]
+    },
+    {
+        "id": "35e0f8281cac3066",
+        "type": "change",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "e1b52603c6938947",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.message",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 440,
+        "wires": [
+            [
+                "c354ce6105be0c5d"
+            ]
+        ]
+    },
+    {
+        "id": "6a2761a8451c2c96",
         "type": "debug",
-        "z": "29719104d6291d44",
+        "z": "8f6ceb50f45c3ecf",
         "name": "debug 8",
         "active": true,
         "tosidebar": true,
@@ -2074,8 +1934,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 1920,
+        "x": 720,
+        "y": 360,
         "wires": []
     }
 ]

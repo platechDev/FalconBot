@@ -407,7 +407,7 @@
         "wires": [
             [
                 "d285dd9ddd793e3a",
-                "e0c44f3deeeb53c3"
+                "8eaaabf0cef5c158"
             ]
         ]
     },
@@ -997,9 +997,28 @@
         "links": [
             "61925a0504d18f31"
         ],
-        "x": 285,
-        "y": 1000,
+        "x": 555,
+        "y": 1020,
         "wires": []
+    },
+    {
+        "id": "8eaaabf0cef5c158",
+        "type": "function",
+        "z": "29719104d6291d44",
+        "name": "create front message",
+        "func": "msg.payload = {\n    \"topic\": \"front\",\n        \"message\": {\n        \"messageContent\": \"validando ticket\",\n        \"messageType\": \"validate\"\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1020,
+        "wires": [
+            [
+                "e0c44f3deeeb53c3"
+            ]
+        ]
     },
     {
         "id": "012ccaeade39be19",
@@ -1580,7 +1599,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{\"topic\":\"front\",\"message\":{\"id_TRA\":\"5815861107\",\"scannerId\":\"\"}}",
+        "payload": "{\"topic\":\"front\",\"message\":{\"messageContent\":\"vales para pura pija ticket\",\"messageType\":\"validate\"}}",
         "payloadType": "json",
         "x": 170,
         "y": 260,

@@ -209,29 +209,10 @@
             "dd4b528cdb1142b3",
             "723faee578858bda"
         ],
-        "x": 74,
-        "y": 219,
+        "x": 94,
+        "y": 39,
         "w": 592,
         "h": 202
-    },
-    {
-        "id": "b3cef6e616b52378",
-        "type": "group",
-        "z": "8f6ceb50f45c3ecf",
-        "name": "websocket test",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "c69f4a064ad10954",
-            "8289bf3b5c7f841b",
-            "d7d97e6d4accacb2",
-            "03d0d6295da0b14b"
-        ],
-        "x": 74,
-        "y": 39,
-        "w": 412,
-        "h": 162
     },
     {
         "id": "e1b52603c6938947",
@@ -245,12 +226,13 @@
             "b3e2ac18249e8b11",
             "720aaaf16802b790",
             "c9ce451808d66da1",
-            "35e0f8281cac3066"
+            "35e0f8281cac3066",
+            "03d0d6295da0b14b"
         ],
         "x": 94,
-        "y": 519,
+        "y": 259,
         "w": 692,
-        "h": 109.5
+        "h": 142
     },
     {
         "id": "928414625d31ff23",
@@ -907,7 +889,7 @@
         "data": "payload",
         "dataType": "msg",
         "active": true,
-        "x": 610,
+        "x": 630,
         "y": 40,
         "wires": [
             []
@@ -997,7 +979,7 @@
         "links": [
             "61925a0504d18f31"
         ],
-        "x": 555,
+        "x": 565,
         "y": 1020,
         "wires": []
     },
@@ -1006,7 +988,7 @@
         "type": "function",
         "z": "29719104d6291d44",
         "name": "create front message",
-        "func": "msg.payload = {\n    \"topic\": \"front\",\n        \"message\": {\n        \"messageContent\": \"vales para pura pija ticket\",\n        \"messageType\": \"validate\"\n    }\n}\nreturn msg;",
+        "func": "msg.payload = {\n    \"topic\": \"front\",\n        \"message\": {\n        \"messageContent\": \"validando ticket\",\n        \"messageType\": \"validate\"\n    }\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1562,8 +1544,8 @@
         "z": "8f6ceb50f45c3ecf",
         "name": "",
         "voice": "0",
-        "x": 890,
-        "y": 560,
+        "x": 910,
+        "y": 300,
         "wires": []
     },
     {
@@ -1574,8 +1556,8 @@
         "name": "susuerteWebsocket",
         "server": "",
         "client": "a21ccdb1ffda080b",
-        "x": 550,
-        "y": 280,
+        "x": 570,
+        "y": 100,
         "wires": []
     },
     {
@@ -1583,7 +1565,7 @@
         "type": "inject",
         "z": "8f6ceb50f45c3ecf",
         "g": "011ba67085db0a79",
-        "name": "test",
+        "name": "test front",
         "props": [
             {
                 "p": "payload"
@@ -1599,10 +1581,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{\"topic\":\"front\",\"message\":{\"messageContent\":\"vales para pura pija ticket\",\"messageType\":\"validate\"}}",
+        "payload": "{\"topic\":\"front\",\"message\":{\"messageContent\":\"test\",\"messageType\":\"validate\"}}",
         "payloadType": "json",
-        "x": 170,
-        "y": 260,
+        "x": 200,
+        "y": 80,
         "wires": [
             [
                 "6211c4ea1042167c"
@@ -1623,8 +1605,8 @@
             "103527fc1f03fa19",
             "7497593b8352c848"
         ],
-        "x": 195,
-        "y": 340,
+        "x": 215,
+        "y": 160,
         "wires": [
             [
                 "287cf2f1fde8d7ac"
@@ -1637,17 +1619,18 @@
         "z": "8f6ceb50f45c3ecf",
         "g": "011ba67085db0a79",
         "name": "getScannerId",
-        "func": "msg.payload.message.scannerId = global.get(\"scannerId\")\nmsg.payload.message.token = global.get(\"token\")\n\nreturn msg;",
+        "func": "msg.payload.message.scannerId = global.get(\"scannerId\")\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
-        "y": 260,
+        "x": 380,
+        "y": 80,
         "wires": [
             [
-                "287cf2f1fde8d7ac"
+                "287cf2f1fde8d7ac",
+                "ac957fbb4bceabe3"
             ]
         ]
     },
@@ -1658,10 +1641,11 @@
         "g": "011ba67085db0a79",
         "name": "link in 12",
         "links": [
-            "e0c44f3deeeb53c3"
+            "e0c44f3deeeb53c3",
+            "60339b139742e812"
         ],
-        "x": 195,
-        "y": 300,
+        "x": 215,
+        "y": 120,
         "wires": [
             [
                 "6211c4ea1042167c"
@@ -1669,75 +1653,17 @@
         ]
     },
     {
-        "id": "c69f4a064ad10954",
-        "type": "websocket out",
-        "z": "8f6ceb50f45c3ecf",
-        "g": "b3cef6e616b52378",
-        "name": "testWebsocket",
-        "server": "",
-        "client": "49b1776fbf1ce66a",
-        "x": 380,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "8289bf3b5c7f841b",
-        "type": "inject",
-        "z": "8f6ceb50f45c3ecf",
-        "g": "b3cef6e616b52378",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 200,
-        "y": 80,
-        "wires": [
-            [
-                "c69f4a064ad10954"
-            ]
-        ]
-    },
-    {
-        "id": "d7d97e6d4accacb2",
-        "type": "websocket in",
-        "z": "8f6ceb50f45c3ecf",
-        "g": "b3cef6e616b52378",
-        "name": "testWebsocket",
-        "server": "",
-        "client": "a21ccdb1ffda080b",
-        "x": 180,
-        "y": 160,
-        "wires": [
-            [
-                "03d0d6295da0b14b"
-            ]
-        ]
-    },
-    {
         "id": "03d0d6295da0b14b",
         "type": "link out",
         "z": "8f6ceb50f45c3ecf",
-        "g": "b3cef6e616b52378",
+        "g": "e1b52603c6938947",
         "name": "link out 20",
         "mode": "link",
         "links": [
             "0e793c467675e12e"
         ],
-        "x": 385,
-        "y": 160,
+        "x": 355,
+        "y": 360,
         "wires": []
     },
     {
@@ -1749,10 +1675,11 @@
         "server": "",
         "client": "a21ccdb1ffda080b",
         "x": 210,
-        "y": 580,
+        "y": 320,
         "wires": [
             [
-                "720aaaf16802b790"
+                "720aaaf16802b790",
+                "03d0d6295da0b14b"
             ]
         ]
     },
@@ -1766,7 +1693,7 @@
         "action": "",
         "pretty": false,
         "x": 390,
-        "y": 580,
+        "y": 320,
         "wires": [
             [
                 "c9ce451808d66da1"
@@ -1785,8 +1712,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 360,
+        "x": 380,
+        "y": 180,
         "wires": [
             [
                 "287cf2f1fde8d7ac"
@@ -1822,10 +1749,11 @@
         "repair": false,
         "outputs": 3,
         "x": 530,
-        "y": 580,
+        "y": 320,
         "wires": [
             [
-                "35e0f8281cac3066"
+                "35e0f8281cac3066",
+                "96740aa1ab1151b5"
             ],
             [],
             []
@@ -1852,7 +1780,7 @@
         "to": "",
         "reg": false,
         "x": 680,
-        "y": 560,
+        "y": 300,
         "wires": [
             [
                 "c354ce6105be0c5d"
@@ -1868,12 +1796,106 @@
         "links": [
             "8c92dc584076f69c"
         ],
-        "x": 195,
-        "y": 380,
+        "x": 215,
+        "y": 200,
         "wires": [
             [
                 "dd4b528cdb1142b3"
             ]
+        ]
+    },
+    {
+        "id": "39d5afa120ed78c3",
+        "type": "function",
+        "z": "8f6ceb50f45c3ecf",
+        "name": "create front message",
+        "func": "if(flow.get(\"canSendFront\") === true){\n    const frontMessage = {\n        \"topic\": \"front\",\n            \"message\": {\n            \"messageContent\": flow.get(\"messageContent\"),\n            \"messageType\": \"error\"\n        }\n    }\n\n    msg.payload = frontMessage\n    \n    flow.set(\"canSendFront\", false)\n\n    return msg;\n\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 420,
+        "wires": [
+            [
+                "60339b139742e812"
+            ]
+        ]
+    },
+    {
+        "id": "60339b139742e812",
+        "type": "link out",
+        "z": "8f6ceb50f45c3ecf",
+        "name": "link out 23",
+        "mode": "link",
+        "links": [
+            "61925a0504d18f31"
+        ],
+        "x": 985,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "ac957fbb4bceabe3",
+        "type": "debug",
+        "z": "8f6ceb50f45c3ecf",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "dbcd527eb2ff7ada",
+        "type": "inject",
+        "z": "8f6ceb50f45c3ecf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 650,
+        "y": 420,
+        "wires": [
+            [
+                "39d5afa120ed78c3"
+            ]
+        ]
+    },
+    {
+        "id": "96740aa1ab1151b5",
+        "type": "function",
+        "z": "8f6ceb50f45c3ecf",
+        "name": "send Front",
+        "func": "flow.set(\"canSendFront\", true)\nflow.set(\"messageContent\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 340,
+        "wires": [
+            []
         ]
     }
 ]

@@ -69,7 +69,7 @@
             "fd9c651dce984063"
         ],
         "x": 44,
-        "y": 579,
+        "y": 519,
         "w": 942,
         "h": 162
     },
@@ -85,12 +85,19 @@
             "d285dd9ddd793e3a",
             "349cad3e18cc7307",
             "65e04b89d367620f",
-            "e9a630128f46d513"
+            "35ed63a3832eeb2d",
+            "7680aae36539f4d5",
+            "93f9841ea2fcdefe",
+            "fe11c7924352f110",
+            "8c92dc584076f69c",
+            "cdb491b0ca75de58",
+            "bfb8ec3998c11054",
+            "1142ce76241c12ad"
         ],
-        "x": 34,
-        "y": 899,
-        "w": 552,
-        "h": 82
+        "x": 54,
+        "y": 699,
+        "w": 942,
+        "h": 222
     },
     {
         "id": "866e803343faada7",
@@ -104,8 +111,8 @@
             "0f5e5dc41b5ed50f",
             "0e793c467675e12e"
         ],
-        "x": 734,
-        "y": 899,
+        "x": 1014,
+        "y": 719,
         "w": 252,
         "h": 82
     },
@@ -222,22 +229,45 @@
         "y": 259
     },
     {
-        "id": "928414625d31ff23",
+        "id": "5120eecda04848f2",
         "type": "group",
         "z": "29719104d6291d44",
-        "name": "Get Id",
+        "name": "sender messages to front",
         "style": {
             "label": true
         },
         "nodes": [
-            "52b9378c24125654",
-            "fe11c7924352f110",
-            "8c92dc584076f69c"
+            "e0c44f3deeeb53c3",
+            "8eaaabf0cef5c158",
+            "803972a2713b70b7"
         ],
-        "x": 34,
-        "y": 1059,
-        "w": 272,
+        "x": 1014,
+        "y": 959,
+        "w": 382,
         "h": 82
+    },
+    {
+        "id": "cd56764119f1e097",
+        "type": "group",
+        "z": "29719104d6291d44",
+        "name": "call falcon Beuty",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "901374b3fe108d32",
+            "9e6eaa2d26c2f107",
+            "0f91e6d812178d2d",
+            "a2e31482e8404cfb",
+            "1153052208f61348",
+            "b64e19f2fb74254a",
+            "7ee50bbc39298829",
+            "137af4475b726081"
+        ],
+        "x": 64,
+        "y": 939,
+        "w": 912,
+        "h": 142
     },
     {
         "id": "f6b9339d315e79c8",
@@ -300,6 +330,18 @@
         "proxyPort": ""
     },
     {
+        "id": "a9a21b1f5e779a57",
+        "type": "axios-endpoint",
+        "name": "falconBeauty Local",
+        "baseURL": "http://127.0.0.1:7000",
+        "caCertPath": "",
+        "rejectUnauthorized": true,
+        "proxyEnabled": false,
+        "proxyProtocol": "https",
+        "proxyHost": "",
+        "proxyPort": ""
+    },
+    {
         "id": "5c8269dfa8b37989",
         "type": "file in",
         "z": "29719104d6291d44",
@@ -313,7 +355,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 180,
-        "y": 660,
+        "y": 600,
         "wires": [
             [
                 "392ea123608372ce"
@@ -333,7 +375,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 660,
+        "y": 600,
         "wires": [
             [
                 "50c5e8ee609b1e18",
@@ -350,8 +392,8 @@
         "links": [
             "50c5e8ee609b1e18"
         ],
-        "x": 75,
-        "y": 940,
+        "x": 95,
+        "y": 780,
         "wires": [
             [
                 "65e04b89d367620f"
@@ -370,12 +412,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 190,
-        "y": 940,
+        "x": 210,
+        "y": 780,
         "wires": [
             [
                 "d285dd9ddd793e3a",
-                "8eaaabf0cef5c158"
+                "35ed63a3832eeb2d",
+                "93f9841ea2fcdefe"
             ]
         ]
     },
@@ -536,7 +579,7 @@
             "07d0ba408236e7ae"
         ],
         "x": 85,
-        "y": 660,
+        "y": 600,
         "wires": [
             [
                 "5c8269dfa8b37989"
@@ -564,7 +607,7 @@
         "to": "",
         "reg": false,
         "x": 590,
-        "y": 660,
+        "y": 600,
         "wires": [
             [
                 "61f2c11a1ea9d86a"
@@ -582,7 +625,7 @@
             "1aebf27e979f023e"
         ],
         "x": 945,
-        "y": 660,
+        "y": 600,
         "wires": []
     },
     {
@@ -614,7 +657,7 @@
             "a4b1799082becc25"
         ],
         "x": 525,
-        "y": 700,
+        "y": 640,
         "wires": []
     },
     {
@@ -634,21 +677,6 @@
         ]
     },
     {
-        "id": "e9a630128f46d513",
-        "type": "link out",
-        "z": "29719104d6291d44",
-        "g": "da4aeef4c08f8adf",
-        "name": "link out 5",
-        "mode": "link",
-        "links": [
-            "0e793c467675e12e",
-            "52b9378c24125654"
-        ],
-        "x": 545,
-        "y": 940,
-        "wires": []
-    },
-    {
         "id": "0f5e5dc41b5ed50f",
         "type": "debug",
         "z": "29719104d6291d44",
@@ -662,8 +690,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 940,
+        "x": 1160,
+        "y": 760,
         "wires": []
     },
     {
@@ -681,10 +709,12 @@
             "42ff19f6e6383224",
             "e9a630128f46d513",
             "d364125dfef5f330",
-            "03d0d6295da0b14b"
+            "03d0d6295da0b14b",
+            "9e6eaa2d26c2f107",
+            "1142ce76241c12ad"
         ],
-        "x": 775,
-        "y": 940,
+        "x": 1055,
+        "y": 760,
         "wires": [
             [
                 "0f5e5dc41b5ed50f"
@@ -749,7 +779,7 @@
             "61a10d2df90a6726"
         ],
         "x": 725,
-        "y": 620,
+        "y": 560,
         "wires": [
             [
                 "61f2c11a1ea9d86a"
@@ -799,11 +829,12 @@
                 "valueValue": ""
             }
         ],
-        "x": 410,
-        "y": 940,
+        "x": 430,
+        "y": 780,
         "wires": [
             [
-                "e9a630128f46d513"
+                "fe11c7924352f110",
+                "1142ce76241c12ad"
             ]
         ]
     },
@@ -839,7 +870,7 @@
         "filename": "filename",
         "filenameType": "msg",
         "x": 830,
-        "y": 660,
+        "y": 600,
         "wires": [
             [
                 "23f7e58bb6973551"
@@ -882,27 +913,10 @@
         ]
     },
     {
-        "id": "52b9378c24125654",
-        "type": "link in",
-        "z": "29719104d6291d44",
-        "g": "928414625d31ff23",
-        "name": "link in 5",
-        "links": [
-            "e9a630128f46d513"
-        ],
-        "x": 75,
-        "y": 1100,
-        "wires": [
-            [
-                "fe11c7924352f110"
-            ]
-        ]
-    },
-    {
         "id": "fe11c7924352f110",
         "type": "switch",
         "z": "29719104d6291d44",
-        "g": "928414625d31ff23",
+        "g": "da4aeef4c08f8adf",
         "name": "",
         "property": "payload.error",
         "propertyType": "msg",
@@ -911,16 +925,24 @@
                 "t": "eq",
                 "v": "no error",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "error no winner",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
-        "x": 170,
-        "y": 1100,
+        "outputs": 2,
+        "x": 610,
+        "y": 780,
         "wires": [
             [
                 "8c92dc584076f69c"
+            ],
+            [
+                "cdb491b0ca75de58"
             ]
         ]
     },
@@ -928,47 +950,348 @@
         "id": "8c92dc584076f69c",
         "type": "link out",
         "z": "29719104d6291d44",
-        "g": "928414625d31ff23",
+        "g": "da4aeef4c08f8adf",
         "name": "link out 21",
         "mode": "link",
         "links": [
             "723faee578858bda"
         ],
-        "x": 265,
-        "y": 1100,
+        "x": 725,
+        "y": 760,
         "wires": []
     },
     {
         "id": "e0c44f3deeeb53c3",
         "type": "link out",
         "z": "29719104d6291d44",
+        "g": "5120eecda04848f2",
         "name": "link out 22",
         "mode": "link",
         "links": [
             "61925a0504d18f31"
         ],
-        "x": 565,
-        "y": 1020,
+        "x": 1355,
+        "y": 1000,
         "wires": []
     },
     {
         "id": "8eaaabf0cef5c158",
         "type": "function",
         "z": "29719104d6291d44",
+        "g": "5120eecda04848f2",
         "name": "create front message",
-        "func": "msg.payload = {\n    \"topic\": \"front\",\n        \"message\": {\n        \"messageContent\": \"validando ticket\",\n        \"messageType\": \"validate\"\n    }\n}\nreturn msg;",
+        "func": "const {content, type} = msg.payload\n\nmsg.payload = {\n    \"topic\": \"front\",\n        \"message\": {\n        \"messageContent\": content,\n        \"messageType\": type\n    }\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 1020,
+        "x": 1200,
+        "y": 1000,
         "wires": [
             [
                 "e0c44f3deeeb53c3"
             ]
         ]
+    },
+    {
+        "id": "35ed63a3832eeb2d",
+        "type": "function",
+        "z": "29719104d6291d44",
+        "g": "da4aeef4c08f8adf",
+        "name": "build validate message",
+        "func": "msg.payload.content = \"validando ticket\"\nmsg.payload.type = \"validate\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 840,
+        "wires": [
+            [
+                "7680aae36539f4d5"
+            ]
+        ]
+    },
+    {
+        "id": "7680aae36539f4d5",
+        "type": "link out",
+        "z": "29719104d6291d44",
+        "g": "da4aeef4c08f8adf",
+        "name": "link out 24",
+        "mode": "link",
+        "links": [
+            "803972a2713b70b7"
+        ],
+        "x": 575,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "803972a2713b70b7",
+        "type": "link in",
+        "z": "29719104d6291d44",
+        "g": "5120eecda04848f2",
+        "name": "link in 14",
+        "links": [
+            "7680aae36539f4d5",
+            "bfb8ec3998c11054",
+            "137af4475b726081"
+        ],
+        "x": 1055,
+        "y": 1000,
+        "wires": [
+            [
+                "8eaaabf0cef5c158"
+            ]
+        ]
+    },
+    {
+        "id": "cdb491b0ca75de58",
+        "type": "function",
+        "z": "29719104d6291d44",
+        "g": "da4aeef4c08f8adf",
+        "name": "build try again message",
+        "func": "msg.payload.content = \"intentado de nuevo\"\nmsg.payload.type    = \"validate\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 800,
+        "wires": [
+            [
+                "bfb8ec3998c11054"
+            ]
+        ]
+    },
+    {
+        "id": "bfb8ec3998c11054",
+        "type": "link out",
+        "z": "29719104d6291d44",
+        "g": "da4aeef4c08f8adf",
+        "name": "link out 25",
+        "mode": "link",
+        "links": [
+            "803972a2713b70b7",
+            "b64e19f2fb74254a"
+        ],
+        "x": 955,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "901374b3fe108d32",
+        "type": "axios-request",
+        "z": "29719104d6291d44",
+        "g": "cd56764119f1e097",
+        "name": "FalconBeauty",
+        "endpoint": "a9a21b1f5e779a57",
+        "method": "post",
+        "url": "/api/filter",
+        "responseType": "json",
+        "keepAlive": false,
+        "timeout": 30000,
+        "validateStatus": true,
+        "headers": [
+            {
+                "keyType": "str",
+                "keyValue": "Content-Type",
+                "valueType": "str",
+                "valueValue": "application/json"
+            }
+        ],
+        "params": [
+            {
+                "keyType": "str",
+                "keyValue": "",
+                "valueType": "str",
+                "valueValue": ""
+            }
+        ],
+        "x": 420,
+        "y": 1020,
+        "wires": [
+            [
+                "9e6eaa2d26c2f107",
+                "a2e31482e8404cfb"
+            ]
+        ]
+    },
+    {
+        "id": "9e6eaa2d26c2f107",
+        "type": "link out",
+        "z": "29719104d6291d44",
+        "g": "cd56764119f1e097",
+        "name": "link out 26",
+        "mode": "link",
+        "links": [
+            "0e793c467675e12e"
+        ],
+        "x": 565,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "93f9841ea2fcdefe",
+        "type": "change",
+        "z": "29719104d6291d44",
+        "g": "da4aeef4c08f8adf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "image",
+                "pt": "flow",
+                "to": "payload.image",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0f91e6d812178d2d",
+        "type": "function",
+        "z": "29719104d6291d44",
+        "g": "cd56764119f1e097",
+        "name": "create Json",
+        "func": "const obj = {\n    \"image\": flow.get('image')\n}\n\nmsg = {}\nmsg.payload = obj\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 1020,
+        "wires": [
+            [
+                "901374b3fe108d32"
+            ]
+        ]
+    },
+    {
+        "id": "a2e31482e8404cfb",
+        "type": "switch",
+        "z": "29719104d6291d44",
+        "g": "cd56764119f1e097",
+        "name": "",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "no error",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "error no winner",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 590,
+        "y": 1020,
+        "wires": [
+            [
+                "1153052208f61348"
+            ],
+            [
+                "7ee50bbc39298829"
+            ]
+        ]
+    },
+    {
+        "id": "1153052208f61348",
+        "type": "link out",
+        "z": "29719104d6291d44",
+        "g": "cd56764119f1e097",
+        "name": "link out 27",
+        "mode": "link",
+        "links": [
+            "723faee578858bda"
+        ],
+        "x": 685,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "b64e19f2fb74254a",
+        "type": "link in",
+        "z": "29719104d6291d44",
+        "g": "cd56764119f1e097",
+        "name": "link in 15",
+        "links": [
+            "bfb8ec3998c11054"
+        ],
+        "x": 105,
+        "y": 1020,
+        "wires": [
+            [
+                "0f91e6d812178d2d"
+            ]
+        ]
+    },
+    {
+        "id": "1142ce76241c12ad",
+        "type": "link out",
+        "z": "29719104d6291d44",
+        "g": "da4aeef4c08f8adf",
+        "name": "link out 28",
+        "mode": "link",
+        "links": [
+            "0e793c467675e12e"
+        ],
+        "x": 555,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "7ee50bbc39298829",
+        "type": "function",
+        "z": "29719104d6291d44",
+        "g": "cd56764119f1e097",
+        "name": "build no winner message",
+        "func": "msg.payload.content = \"ticket no ganador\"\nmsg.payload.type = \"error\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1040,
+        "wires": [
+            [
+                "137af4475b726081"
+            ]
+        ]
+    },
+    {
+        "id": "137af4475b726081",
+        "type": "link out",
+        "z": "29719104d6291d44",
+        "g": "cd56764119f1e097",
+        "name": "link out 29",
+        "mode": "link",
+        "links": [
+            "803972a2713b70b7"
+        ],
+        "x": 935,
+        "y": 1040,
+        "wires": []
     },
     {
         "id": "012ccaeade39be19",
@@ -1762,7 +2085,8 @@
         "g": "011ba67085db0a79",
         "name": "link in 13",
         "links": [
-            "8c92dc584076f69c"
+            "8c92dc584076f69c",
+            "1153052208f61348"
         ],
         "x": 215,
         "y": 200,

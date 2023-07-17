@@ -92,7 +92,8 @@
             "8c92dc584076f69c",
             "cdb491b0ca75de58",
             "bfb8ec3998c11054",
-            "1142ce76241c12ad"
+            "1142ce76241c12ad",
+            "7eee75874ea83a0b"
         ],
         "x": 54,
         "y": 699,
@@ -137,7 +138,9 @@
             "7e57923fbccc927f"
         ],
         "x": 114,
-        "y": 219
+        "y": 219,
+        "w": 892,
+        "h": 162
     },
     {
         "id": "8a03b788f1979308",
@@ -152,7 +155,9 @@
             "fcd122949e6a4a59"
         ],
         "x": 134,
-        "y": 439
+        "y": 439,
+        "w": 392,
+        "h": 82
     },
     {
         "id": "ea4b339f97dbe608",
@@ -172,7 +177,9 @@
             "ef3a2b58f2f9cb88"
         ],
         "x": 114,
-        "y": 79
+        "y": 79,
+        "w": 652,
+        "h": 122
     },
     {
         "id": "77788d92355a854c",
@@ -188,7 +195,9 @@
             "91ae695d134c9272"
         ],
         "x": 134,
-        "y": 579
+        "y": 539,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "011ba67085db0a79",
@@ -205,10 +214,14 @@
             "6211c4ea1042167c",
             "61925a0504d18f31",
             "dd4b528cdb1142b3",
-            "723faee578858bda"
+            "723faee578858bda",
+            "b7a3742da023411c",
+            "8f5db6ffabe33578"
         ],
         "x": 94,
-        "y": 39
+        "y": 39,
+        "w": 812,
+        "h": 262
     },
     {
         "id": "e1b52603c6938947",
@@ -226,7 +239,9 @@
             "03d0d6295da0b14b"
         ],
         "x": 94,
-        "y": 259
+        "y": 439,
+        "w": 692,
+        "h": 142
     },
     {
         "id": "5120eecda04848f2",
@@ -241,8 +256,8 @@
             "8eaaabf0cef5c158",
             "803972a2713b70b7"
         ],
-        "x": 1014,
-        "y": 959,
+        "x": 1064,
+        "y": 999,
         "w": 382,
         "h": 82
     },
@@ -268,6 +283,45 @@
         "y": 939,
         "w": 912,
         "h": 142
+    },
+    {
+        "id": "5adecfb81f136e6a",
+        "type": "group",
+        "z": "a2cb632c74c1999c",
+        "name": "init counter for backImage",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b6a77c1030981f11",
+            "9aa9cee0c498f34e"
+        ],
+        "x": 134,
+        "y": 639,
+        "w": 432,
+        "h": 82
+    },
+    {
+        "id": "d31a26e196c50b1f",
+        "type": "group",
+        "z": "29719104d6291d44",
+        "name": "backimage Validation",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0899dde4854304f1",
+            "a50bb4889d280917",
+            "645a343f7302badc",
+            "f1794c228ded70a7",
+            "7697e297d978f5b8",
+            "3ee87c8631e1a068",
+            "99720599b2a19207"
+        ],
+        "x": 84,
+        "y": 1119,
+        "w": 712,
+        "h": 122
     },
     {
         "id": "f6b9339d315e79c8",
@@ -296,7 +350,7 @@
     {
         "id": "4e2fe5e7589b6a92",
         "type": "axios-endpoint",
-        "name": "FalconProxy",
+        "name": "FalconMotor",
         "baseURL": "http://3.232.87.89/FalconMotor",
         "caCertPath": "",
         "rejectUnauthorized": true,
@@ -334,6 +388,18 @@
         "type": "axios-endpoint",
         "name": "falconBeauty Local",
         "baseURL": "http://127.0.0.1:7000",
+        "caCertPath": "",
+        "rejectUnauthorized": true,
+        "proxyEnabled": false,
+        "proxyProtocol": "https",
+        "proxyHost": "",
+        "proxyPort": ""
+    },
+    {
+        "id": "4b7cbf203dddaaa6",
+        "type": "axios-endpoint",
+        "name": "",
+        "baseURL": "http://3.232.87.89/FalconBeauty",
         "caCertPath": "",
         "rejectUnauthorized": true,
         "proxyEnabled": false,
@@ -806,7 +872,7 @@
         "z": "29719104d6291d44",
         "g": "da4aeef4c08f8adf",
         "name": "FalconMotor ",
-        "endpoint": "06ddd4a8830368f5",
+        "endpoint": "4e2fe5e7589b6a92",
         "method": "post",
         "url": "",
         "responseType": "json",
@@ -906,7 +972,7 @@
         "data": "payload",
         "dataType": "msg",
         "active": true,
-        "x": 610,
+        "x": 630,
         "y": 40,
         "wires": [
             []
@@ -930,11 +996,16 @@
                 "t": "eq",
                 "v": "error no winner",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "no id found",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 2,
+        "outputs": 3,
         "x": 610,
         "y": 780,
         "wires": [
@@ -943,6 +1014,9 @@
             ],
             [
                 "cdb491b0ca75de58"
+            ],
+            [
+                "7eee75874ea83a0b"
             ]
         ]
     },
@@ -957,7 +1031,7 @@
             "723faee578858bda"
         ],
         "x": 725,
-        "y": 760,
+        "y": 740,
         "wires": []
     },
     {
@@ -970,8 +1044,8 @@
         "links": [
             "61925a0504d18f31"
         ],
-        "x": 1355,
-        "y": 1000,
+        "x": 1405,
+        "y": 1040,
         "wires": []
     },
     {
@@ -986,8 +1060,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1200,
-        "y": 1000,
+        "x": 1250,
+        "y": 1040,
         "wires": [
             [
                 "e0c44f3deeeb53c3"
@@ -1037,10 +1111,11 @@
         "links": [
             "7680aae36539f4d5",
             "bfb8ec3998c11054",
-            "137af4475b726081"
+            "137af4475b726081",
+            "7697e297d978f5b8"
         ],
-        "x": 1055,
-        "y": 1000,
+        "x": 1105,
+        "y": 1040,
         "wires": [
             [
                 "8eaaabf0cef5c158"
@@ -1060,7 +1135,7 @@
         "finalize": "",
         "libs": [],
         "x": 810,
-        "y": 800,
+        "y": 780,
         "wires": [
             [
                 "bfb8ec3998c11054"
@@ -1079,7 +1154,7 @@
             "b64e19f2fb74254a"
         ],
         "x": 955,
-        "y": 800,
+        "y": 780,
         "wires": []
     },
     {
@@ -1088,7 +1163,7 @@
         "z": "29719104d6291d44",
         "g": "cd56764119f1e097",
         "name": "FalconBeauty",
-        "endpoint": "a9a21b1f5e779a57",
+        "endpoint": "4b7cbf203dddaaa6",
         "method": "post",
         "url": "/api/filter",
         "responseType": "json",
@@ -1291,6 +1366,240 @@
         ],
         "x": 935,
         "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "7eee75874ea83a0b",
+        "type": "link out",
+        "z": "29719104d6291d44",
+        "g": "da4aeef4c08f8adf",
+        "name": "link out 30",
+        "mode": "link",
+        "links": [
+            "0899dde4854304f1"
+        ],
+        "x": 725,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "0899dde4854304f1",
+        "type": "link in",
+        "z": "29719104d6291d44",
+        "g": "d31a26e196c50b1f",
+        "name": "link in 16",
+        "links": [
+            "7eee75874ea83a0b"
+        ],
+        "x": 125,
+        "y": 1180,
+        "wires": [
+            [
+                "645a343f7302badc"
+            ]
+        ]
+    },
+    {
+        "id": "a50bb4889d280917",
+        "type": "switch",
+        "z": "29719104d6291d44",
+        "g": "d31a26e196c50b1f",
+        "name": "",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "no recognize id TRA",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "no error",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 1180,
+        "wires": [
+            [
+                "f1794c228ded70a7"
+            ],
+            [
+                "3ee87c8631e1a068"
+            ]
+        ]
+    },
+    {
+        "id": "645a343f7302badc",
+        "type": "function",
+        "z": "29719104d6291d44",
+        "g": "d31a26e196c50b1f",
+        "name": "validate backImage",
+        "func": "const contImageBack = global.get('contBackImage')\n\nif(contImageBack === 1){\n    global.set('contBackImage', 0)\n    msg.payload.error = \"no recognize id TRA\"\n    return msg\n}\n\nglobal.set('contBackImage', contImageBack + 1)\nmsg.payload.error = \"no error\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 1180,
+        "wires": [
+            [
+                "a50bb4889d280917"
+            ]
+        ]
+    },
+    {
+        "id": "f1794c228ded70a7",
+        "type": "function",
+        "z": "29719104d6291d44",
+        "g": "d31a26e196c50b1f",
+        "name": "build no recognize message",
+        "func": "msg.payload.content = \"ticket no reconocido\"\nmsg.payload.type = \"error\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 1160,
+        "wires": [
+            [
+                "7697e297d978f5b8"
+            ]
+        ]
+    },
+    {
+        "id": "7697e297d978f5b8",
+        "type": "link out",
+        "z": "29719104d6291d44",
+        "g": "d31a26e196c50b1f",
+        "name": "link out 31",
+        "mode": "link",
+        "links": [
+            "71b1c5b8aae1b24f",
+            "803972a2713b70b7"
+        ],
+        "x": 755,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "3ee87c8631e1a068",
+        "type": "change",
+        "z": "29719104d6291d44",
+        "g": "d31a26e196c50b1f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "backImage",
+                "pt": "global",
+                "to": "image",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1200,
+        "wires": [
+            [
+                "99720599b2a19207"
+            ]
+        ]
+    },
+    {
+        "id": "9627b7c940e40d16",
+        "type": "inject",
+        "z": "29719104d6291d44",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 1300,
+        "wires": [
+            [
+                "043cf510d2c54a7f"
+            ]
+        ]
+    },
+    {
+        "id": "b703e9db8a0bba19",
+        "type": "debug",
+        "z": "29719104d6291d44",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "043cf510d2c54a7f",
+        "type": "change",
+        "z": "29719104d6291d44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ticketObject",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 1300,
+        "wires": [
+            [
+                "b703e9db8a0bba19"
+            ]
+        ]
+    },
+    {
+        "id": "99720599b2a19207",
+        "type": "link out",
+        "z": "29719104d6291d44",
+        "g": "d31a26e196c50b1f",
+        "name": "link out 32",
+        "mode": "link",
+        "links": [
+            "8f5db6ffabe33578"
+        ],
+        "x": 725,
+        "y": 1200,
         "wires": []
     },
     {
@@ -1766,7 +2075,7 @@
             }
         ],
         "x": 450,
-        "y": 620,
+        "y": 580,
         "wires": [
             [
                 "91ae695d134c9272"
@@ -1796,7 +2105,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 250,
-        "y": 620,
+        "y": 580,
         "wires": [
             [
                 "229668aa4070c616"
@@ -1824,9 +2133,98 @@
         "to": "",
         "reg": false,
         "x": 660,
-        "y": 620,
+        "y": 580,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "b6a77c1030981f11",
+        "type": "inject",
+        "z": "a2cb632c74c1999c",
+        "g": "5adecfb81f136e6a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 680,
+        "wires": [
+            [
+                "9aa9cee0c498f34e"
+            ]
+        ]
+    },
+    {
+        "id": "9aa9cee0c498f34e",
+        "type": "function",
+        "z": "a2cb632c74c1999c",
+        "g": "5adecfb81f136e6a",
+        "name": "init the backImage",
+        "func": "global.set(\"contBackImage\",0)\nglobal.set(\"backImage\",\"\")\nglobal.set(\"ticketObject\",{})\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71b1c5b8aae1b24f",
+        "type": "link in",
+        "z": "a2cb632c74c1999c",
+        "name": "link in 17",
+        "links": [
+            "7697e297d978f5b8"
+        ],
+        "x": 175,
+        "y": 760,
+        "wires": [
+            [
+                "d2bb4e54fe6fb044"
+            ]
+        ]
+    },
+    {
+        "id": "d2bb4e54fe6fb044",
+        "type": "delay",
+        "z": "a2cb632c74c1999c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 280,
+        "y": 760,
+        "wires": [
+            [
+                "9aa9cee0c498f34e"
+            ]
         ]
     },
     {
@@ -1835,8 +2233,8 @@
         "z": "8f6ceb50f45c3ecf",
         "name": "",
         "voice": "0",
-        "x": 910,
-        "y": 300,
+        "x": 890,
+        "y": 480,
         "wires": []
     },
     {
@@ -1847,8 +2245,8 @@
         "name": "susuerteWebsocket",
         "server": "",
         "client": "a21ccdb1ffda080b",
-        "x": 570,
-        "y": 100,
+        "x": 790,
+        "y": 80,
         "wires": []
     },
     {
@@ -1920,8 +2318,7 @@
         "y": 80,
         "wires": [
             [
-                "287cf2f1fde8d7ac",
-                "ac957fbb4bceabe3"
+                "287cf2f1fde8d7ac"
             ]
         ]
     },
@@ -1954,7 +2351,7 @@
             "0e793c467675e12e"
         ],
         "x": 495,
-        "y": 360,
+        "y": 540,
         "wires": []
     },
     {
@@ -1966,7 +2363,7 @@
         "server": "",
         "client": "a21ccdb1ffda080b",
         "x": 210,
-        "y": 320,
+        "y": 500,
         "wires": [
             [
                 "720aaaf16802b790"
@@ -1983,7 +2380,7 @@
         "action": "",
         "pretty": false,
         "x": 390,
-        "y": 320,
+        "y": 500,
         "wires": [
             [
                 "c9ce451808d66da1",
@@ -1996,18 +2393,19 @@
         "type": "function",
         "z": "8f6ceb50f45c3ecf",
         "g": "011ba67085db0a79",
-        "name": "RegisterTicket",
-        "func": "const { webservice, idTra, S3} = msg.payload\n\n\nconst message = {\n    topic : \"ticket\",\n    message : {\n        \"id_TRA\"    : idTra,\n        scannerId   : global.get(\"scannerId\"),\n        token       : global.get(\"token\"),\n        ticketInfo  : webservice,\n        imageUrl   : S3,\n    }\n}\n\nflow.set(\"canRegisterTicket\", false)\n\nmsg.payload = Buffer.from(JSON.stringify(message))\n\nreturn msg; \n",
+        "name": "RegisterTicket back -> front image ",
+        "func": "const { webservice, idTra, S3} = msg.payload\nconst  backImage  = global.get(\"backImage\")\n\nconst message = {\n    topic: \"ticket\",\n    message: {\n        \"id_TRA\": idTra,\n        scannerId: global.get(\"scannerId\"),\n        token: global.get(\"token\"),\n        ticketInfo: webservice,\n        imageUrl: S3,\n        backImage: global.get('backImage')\n    }\n}\n\nif(backImage !== \"\"){\n\n    global.set(\"contBackImage\", 0)\n    global.set(\"backImage\", \"\")\n    global.set(\"ticketObject\",{})\n\n    msg.payload = Buffer.from(JSON.stringify(message))\n\n    return msg;\n}\n\nif(backImage === \"\"){\n    global.set(\"ticketObject\", message)\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
+        "x": 440,
         "y": 180,
         "wires": [
             [
-                "287cf2f1fde8d7ac"
+                "287cf2f1fde8d7ac",
+                "3cb7193dd225ac74"
             ]
         ]
     },
@@ -2040,7 +2438,7 @@
         "repair": false,
         "outputs": 3,
         "x": 530,
-        "y": 320,
+        "y": 500,
         "wires": [
             [
                 "35e0f8281cac3066",
@@ -2071,7 +2469,7 @@
         "to": "",
         "reg": false,
         "x": 680,
-        "y": 300,
+        "y": 480,
         "wires": [
             [
                 "c354ce6105be0c5d"
@@ -2108,7 +2506,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 480,
+        "y": 660,
         "wires": [
             [
                 "60339b139742e812"
@@ -2124,24 +2522,8 @@
         "links": [
             "61925a0504d18f31"
         ],
-        "x": 525,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "ac957fbb4bceabe3",
-        "type": "debug",
-        "z": "8f6ceb50f45c3ecf",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 80,
+        "x": 535,
+        "y": 660,
         "wires": []
     },
     {
@@ -2166,7 +2548,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 190,
-        "y": 480,
+        "y": 660,
         "wires": [
             [
                 "39d5afa120ed78c3"
@@ -2185,9 +2567,62 @@
         "finalize": "",
         "libs": [],
         "x": 910,
-        "y": 340,
+        "y": 520,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "b7a3742da023411c",
+        "type": "function",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "011ba67085db0a79",
+        "name": "RegisterTicket front -> back image ",
+        "func": "const message = global.get(\"ticketObject\")\n\nif(message.message){\n    message.message.backImage = global.get('backImage')\n\n    global.set(\"contBackImage\", 0)\n    global.set(\"backImage\", \"\")\n    global.set(\"ticketObject\", {})\n\n    msg.payload = Buffer.from(JSON.stringify(message))\n\n    return msg;\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "287cf2f1fde8d7ac"
+            ]
+        ]
+    },
+    {
+        "id": "3cb7193dd225ac74",
+        "type": "debug",
+        "z": "8f6ceb50f45c3ecf",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8f5db6ffabe33578",
+        "type": "link in",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "011ba67085db0a79",
+        "name": "RegisterTicket front -> back image ",
+        "links": [
+            "99720599b2a19207"
+        ],
+        "x": 215,
+        "y": 260,
+        "wires": [
+            [
+                "b7a3742da023411c"
+            ]
         ]
     }
 ]

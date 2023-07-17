@@ -2220,7 +2220,7 @@
         "g": "011ba67085db0a79",
         "name": "susuerteWebsocket",
         "server": "",
-        "client": "a21ccdb1ffda080b",
+        "client": "49b1776fbf1ce66a",
         "x": 790,
         "y": 80,
         "wires": []
@@ -2337,7 +2337,7 @@
         "g": "e1b52603c6938947",
         "name": "susuerteWebsocket",
         "server": "",
-        "client": "a21ccdb1ffda080b",
+        "client": "49b1776fbf1ce66a",
         "x": 210,
         "y": 500,
         "wires": [

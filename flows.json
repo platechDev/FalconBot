@@ -138,7 +138,9 @@
             "7e57923fbccc927f"
         ],
         "x": 114,
-        "y": 219
+        "y": 219,
+        "w": 892,
+        "h": 162
     },
     {
         "id": "8a03b788f1979308",
@@ -153,7 +155,9 @@
             "fcd122949e6a4a59"
         ],
         "x": 134,
-        "y": 439
+        "y": 439,
+        "w": 392,
+        "h": 82
     },
     {
         "id": "ea4b339f97dbe608",
@@ -173,7 +177,9 @@
             "ef3a2b58f2f9cb88"
         ],
         "x": 114,
-        "y": 79
+        "y": 79,
+        "w": 652,
+        "h": 122
     },
     {
         "id": "77788d92355a854c",
@@ -189,7 +195,9 @@
             "91ae695d134c9272"
         ],
         "x": 134,
-        "y": 539
+        "y": 539,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "011ba67085db0a79",
@@ -209,11 +217,12 @@
             "723faee578858bda",
             "b7a3742da023411c",
             "8f5db6ffabe33578",
-            "3cb7193dd225ac74"
+            "3cb7193dd225ac74",
+            "9e8bc8cf6e9c3408"
         ],
         "x": 94,
         "y": 39,
-        "w": 752,
+        "w": 712,
         "h": 262
     },
     {
@@ -290,7 +299,9 @@
             "9aa9cee0c498f34e"
         ],
         "x": 134,
-        "y": 639
+        "y": 639,
+        "w": 432,
+        "h": 82
     },
     {
         "id": "d31a26e196c50b1f",
@@ -323,8 +334,8 @@
     {
         "id": "49b1776fbf1ce66a",
         "type": "websocket-client",
-        "path": "ws://3.232.87.89/susuerteWebsocket",
-        "tls": "",
+        "path": "wss://proxyfalcon.susuerte.com/susuerteWebsocket/",
+        "tls": "c1179dd2b6e641b1",
         "wholemsg": "false",
         "hb": "0",
         "subprotocol": ""
@@ -342,7 +353,7 @@
         "id": "4e2fe5e7589b6a92",
         "type": "axios-endpoint",
         "name": "FalconMotor",
-        "baseURL": "http://3.232.87.89/FalconMotor",
+        "baseURL": "https://proxyfalcon.susuerte.com/FalconMotor",
         "caCertPath": "",
         "rejectUnauthorized": true,
         "proxyEnabled": false,
@@ -354,9 +365,9 @@
         "id": "26cf54f551937318",
         "type": "axios-endpoint",
         "name": "SusuerteBack",
-        "baseURL": "http://3.232.87.89/susuerteBack/scanner/token",
+        "baseURL": "https://proxyfalcon.susuerte.com/susuerteBack/scanner/token",
         "caCertPath": "",
-        "rejectUnauthorized": true,
+        "rejectUnauthorized": false,
         "proxyEnabled": false,
         "proxyProtocol": "https",
         "proxyHost": "",
@@ -390,13 +401,27 @@
         "id": "4b7cbf203dddaaa6",
         "type": "axios-endpoint",
         "name": "",
-        "baseURL": "http://3.232.87.89/FalconBeauty",
+        "baseURL": "https://proxyfalcon.susuerte.com/FalconBeauty",
         "caCertPath": "",
         "rejectUnauthorized": true,
         "proxyEnabled": false,
         "proxyProtocol": "https",
         "proxyHost": "",
         "proxyPort": ""
+    },
+    {
+        "id": "c1179dd2b6e641b1",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "certificate.crt",
+        "keyname": "key.key",
+        "caname": "trusted_certificate.ca-bundle",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
     },
     {
         "id": "5c8269dfa8b37989",
@@ -491,7 +516,7 @@
             },
             {
                 "p": "path",
-                "v": "/Users/matador/code/susuerte-develop/falconBot/scannerFolder",
+                "v": "/Users/matador/code/susuerte/susuerte-develop/falconBot/scannerFolder",
                 "vt": "str"
             }
         ],
@@ -963,7 +988,7 @@
         "data": "payload",
         "dataType": "msg",
         "active": true,
-        "x": 630,
+        "x": 610,
         "y": 40,
         "wires": [
             []
@@ -1548,7 +1573,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
+        "x": 580,
         "y": 1300,
         "wires": []
     },
@@ -2003,7 +2028,7 @@
         "z": "a2cb632c74c1999c",
         "g": "ea4b339f97dbe608",
         "name": "config",
-        "filename": "/Users/matador/code/susuerte-develop/falconBot/config/config.json",
+        "filename": "/Users/matador/code/susuerte/susuerte-develop/falconBot/config/config.json",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
@@ -2032,7 +2057,8 @@
         "wires": [
             [
                 "012ccaeade39be19",
-                "3941ecbd587fb0a6"
+                "3941ecbd587fb0a6",
+                "272ddca12f33d80f"
             ]
         ]
     },
@@ -2219,6 +2245,22 @@
         ]
     },
     {
+        "id": "272ddca12f33d80f",
+        "type": "debug",
+        "z": "a2cb632c74c1999c",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 20,
+        "wires": []
+    },
+    {
         "id": "c354ce6105be0c5d",
         "type": "play audio",
         "z": "8f6ceb50f45c3ecf",
@@ -2236,7 +2278,7 @@
         "name": "susuerteWebsocket",
         "server": "",
         "client": "49b1776fbf1ce66a",
-        "x": 730,
+        "x": 670,
         "y": 80,
         "wires": []
     },
@@ -2557,7 +2599,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
+        "x": 910,
         "y": 520,
         "wires": [
             []
@@ -2596,7 +2638,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
+        "x": 700,
         "y": 180,
         "wires": []
     },
@@ -2614,6 +2656,36 @@
         "wires": [
             [
                 "b7a3742da023411c"
+            ]
+        ]
+    },
+    {
+        "id": "9e8bc8cf6e9c3408",
+        "type": "inject",
+        "z": "8f6ceb50f45c3ecf",
+        "g": "011ba67085db0a79",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "287cf2f1fde8d7ac"
             ]
         ]
     }

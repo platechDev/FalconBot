@@ -196,7 +196,7 @@
         ],
         "x": 134,
         "y": 539,
-        "w": 632,
+        "w": 612,
         "h": 82
     },
     {
@@ -353,8 +353,8 @@
         "id": "4e2fe5e7589b6a92",
         "type": "axios-endpoint",
         "name": "FalconMotor",
-        "baseURL": "http://3.232.87.89/FalconMotor",
-        "caCertPath": "",
+        "baseURL": "https://proxyfalcon.susuerte.com/FalconMotor",
+        "caCertPath": "/Users/matador/.node-red/susuerte.ca-bundle",
         "rejectUnauthorized": true,
         "proxyEnabled": false,
         "proxyProtocol": "https",
@@ -366,8 +366,8 @@
         "type": "axios-endpoint",
         "name": "SusuerteBack",
         "baseURL": "https://proxyfalcon.susuerte.com/susuerteBack/scanner/token",
-        "caCertPath": "",
-        "rejectUnauthorized": false,
+        "caCertPath": "/Users/matador/.node-red/susuerte.ca-bundle",
+        "rejectUnauthorized": true,
         "proxyEnabled": false,
         "proxyProtocol": "https",
         "proxyHost": "",
@@ -402,7 +402,7 @@
         "type": "axios-endpoint",
         "name": "",
         "baseURL": "https://proxyfalcon.susuerte.com/FalconBeauty",
-        "caCertPath": "",
+        "caCertPath": "/Users/matador/.node-red/susuerte.ca-bundle",
         "rejectUnauthorized": true,
         "proxyEnabled": false,
         "proxyProtocol": "https",
@@ -2149,7 +2149,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
+        "x": 640,
         "y": 580,
         "wires": [
             []
